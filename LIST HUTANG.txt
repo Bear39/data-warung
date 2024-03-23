@@ -124,7 +124,7 @@ NAMA: ANNAS (SECURITY)
 PERIODE: 01 JAN 2024 - 22 MAR 2024
 TOTAL: 791
 DETAIL:
-- Kurang Periode Kemarin: 93
+- Kurang Periode (DESEMBER) : 93
 - Total Periode Sekarang: 698
 
 NAMA: BAMBANG (SECURITY)
