@@ -334,11 +334,11 @@ public class TempoChecker {
             }
         }
 
-        Mandor curMandor = mapMandor.get("Perorangan-2");
+        Mandor curMandor = mapMandor.get("Sugeng");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("01 Nov 2023");
+            start = dateFormat.parse("01 Feb 2024");
             end = dateFormat.parse("22 Mar 2024");
 
         } catch (Exception e) {
