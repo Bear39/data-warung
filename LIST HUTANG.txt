@@ -1,0 +1,138 @@
+LIST HUTANG MANDOR:
+
+NAMA: YUSUF
+PERIODE: 06 FEB 2024 - 27 FEB 2024
+TOTAL: 15860
+DETAIL:
+- Deni B: 2156
+- Ebi: 1095
+- Erus: 1228
+- Herdi: 1515
+- Irwan: 1853
+- Rubin: 1558
+- Rudi: 2357
+- Sarana: 907
+- Usman: 884
+- Yusuf: 2183
+- sarana: 124
+
+NAMA: SUBADI
+PERIODE: 09 MAR 2024 - 21 MAR 2024
+TOTAL: 37859
+DETAIL:
+- Abay: 51
+- Alip: 606
+- Amad: 119
+- Andres: 771
+- Anggi: 817
+- Apay: 404
+- Beta: 337
+- Bogor: 709
+- Dadan: 571
+- Dede: 827
+- Dono: 582
+- Eja: 948
+- Galuh: 943
+- Gunawan: 775
+- Hasan: 897
+- Iwan: 135
+- Juber: 352
+- Lili: 335
+- Lutfi: 282
+- Maryono: 169
+- Nanang: 544
+- Noval: 158
+- Paul: 280
+- Rahman: 1086
+- Said: 454
+- Salman: 164
+- Sarana: 1811
+- Solihin: 749
+- Sukarjan: 106
+- Sukro: 852
+- Suntono: 114
+- Ujang P: 855
+- Umar: 440
+- Total Periode Sekarang: 18243
+- Kurang Periode (02 Des 2023 - 18 Jan 2024): 15800
+- Kurang Periode (23 Feb 2024 - 08 Mar 2024): 3816
+
+NAMA: MANGGI
+PERIODE: 01 Mar 2024 - 21 Mar 2024
+TOTAL: 22238
+DETAIL:
+- Adin: 3817
+- Ambar: 1481
+- Bakir: 1198
+- Dani: 462
+- Edi: 1683
+- Gepeng: 1007
+- Handi: 629
+- Heri: 231
+- Irun: 1167
+- Jayen: 806
+- Mamat: 1020
+- Mukidin: 815
+- Mutoha: 705
+- Paiman: 341
+- Sair: 964
+- Salim: 286
+- Sardon: 1025
+- Subari: 1778
+- Sugianto: 910
+- Widi: 761
+- Yoto: 1152
+
+NAMA: SUGENG
+PERIODE: 01 Mar 2024 - 21 Mar 2024
+TOTAL: 9288
+DETAIL:
+- Alan: 1694
+- Alex: 585
+- Ali: 427
+- Cekre: 637
+- Gentong: 650
+- Radit: 1160
+- Raip: 62
+- Riko: 1706
+- Saip: 839
+- Sugeng: 1528
+
+NAMA: IPIN (PERORANGAN)
+PERIODE: 16 Mar 2024 - 22 Mar 2024
+TOTAL: 329
+
+NAMA: SAIMAN (PERORANGAN)
+PERIODE: 01 Mar 2024 - 22 Mar 2024
+TOTAL: 416
+DETAIL:
+- Kurang Periode Kemarin: 50
+- Total Periode Sekarang: 366
+
+NAMA: SALUYU (SARANA) - DITAGIHKAN KE PELAKSANA EKO
+PERIODE: 01 NOV 2023 - 22 MAR 2024
+TOTAL: 2364
+
+NAMA: EKO (PELAKSANA)
+PERIODE: 01 NOV 2023 - 22 MAR 2024
+TOTAL: 150
+
+NAMA: RESNU (SECURITY)
+PERIODE: 20 JAN 2024 - 22 MAR 2024
+TOTAL: 1581
+
+NAMA: ANNAS (SECURITY)
+PERIODE: 01 JAN 2024 - 22 MAR 2024
+TOTAL: 791
+DETAIL:
+- Kurang Periode Kemarin: 93
+- Total Periode Sekarang: 698
+
+NAMA: BAMBANG (SECURITY)
+PERIODE: 01 MAR 2024 - 22 MAR 2024
+TOTAL: 199
+
+NAMA: BABEH (K3)
+PERIODE: 01 MAR 2024 - 22 MAR 2024
+TOTAL: 201
+
