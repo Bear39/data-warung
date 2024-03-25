@@ -83,19 +83,19 @@ DETAIL:
 - Yoto: 1152
 
 NAMA: SUGENG
-PERIODE: 01 FEB 2024 - 22 MAR 2024
-TOTAL: 9659
+PERIODE: 01 FEB 2024 - 24 MAR 2024
+TOTAL: 10729
 DETAIL:
-- Alan: 1727
-- Alex: 615
+- Alan: 1871
+- Alex: 719
 - Ali: 427
-- Cekre: 666
-- Gentong: 678
-- Radit: 1214
+- Cekre: 746
+- Gentong: 804
+- Radit: 1421
 - Raip: 62
-- Riko: 1785
-- Saip: 862
-- Sugeng: 1623
+- Riko: 1974
+- Saip: 974
+- Sugeng: 1731
 
 NAMA: IPIN (PERORANGAN)
 PERIODE: 16 Mar 2024 - 22 Mar 2024

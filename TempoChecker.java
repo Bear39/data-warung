@@ -24,16 +24,16 @@ import java.util.stream.Collectors;
 public class TempoChecker {
 
     public static void main(String[] args) throws Exception {
-        String pathString = "C:" + File.separator + "Users" + File.separator +
-                "bpsbi" + File.separator + "OneDrive"
-                + File.separator + "Apartment Bintaro" + File.separator + "Data Harian" +
-                File.separator
-                + "TEMPO WARUNG";
-
         // String pathString = "C:" + File.separator + "Users" + File.separator +
-        // "scg-b" + File.separator + "OneDrive"
-        // + File.separator + "Data Harian" + File.separator
-        // + "TEMPO WARUNG";
+        //         "bpsbi" + File.separator + "OneDrive"
+        //         + File.separator + "Apartment Bintaro" + File.separator + "Data Harian" +
+        //         File.separator
+        //         + "TEMPO WARUNG";
+
+        String pathString = "C:" + File.separator + "Users" + File.separator +
+        "scg-b" + File.separator + "OneDrive"
+        + File.separator + "Data Harian" + File.separator
+        + "TEMPO WARUNG";
 
         clearRevisiDir(pathString);
         checkTempo(pathString);
@@ -334,12 +334,12 @@ public class TempoChecker {
             }
         }
 
-        Mandor curMandor = mapMandor.get("Perorangan");
+        Mandor curMandor = mapMandor.get("Manggi");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("29 Feb 2024");
-            end = dateFormat.parse("22 Mar 2024");
+            start = dateFormat.parse("17 Mar 2024");
+            end = dateFormat.parse("24 Mar 2024");
 
         } catch (Exception e) {
             System.out.println("ERROR!!");
