@@ -24,16 +24,16 @@ import java.util.stream.Collectors;
 public class TempoChecker {
 
     public static void main(String[] args) throws Exception {
-        // String pathString = "C:" + File.separator + "Users" + File.separator +
-        //         "bpsbi" + File.separator + "OneDrive"
-        //         + File.separator + "Apartment Bintaro" + File.separator + "Data Harian" +
-        //         File.separator
-        //         + "TEMPO WARUNG";
-
         String pathString = "C:" + File.separator + "Users" + File.separator +
-        "scg-b" + File.separator + "OneDrive"
-        + File.separator + "Data Harian" + File.separator
-        + "TEMPO WARUNG";
+                "bpsbi" + File.separator + "OneDrive"
+                + File.separator + "Apartment Bintaro" + File.separator + "Data Harian" +
+                File.separator
+                + "BINTARO-APG";
+
+        // String pathString = "C:" + File.separator + "Users" + File.separator +
+        // "scg-b" + File.separator + "OneDrive"
+        // + File.separator + "Data Harian" + File.separator
+        // + "BINTARO-APG";
 
         clearRevisiDir(pathString);
         checkTempo(pathString);
@@ -332,14 +332,17 @@ public class TempoChecker {
             } else if (!errorMandor.isEmpty()) {
                 writeError(errorMandor, filePath);
             }
+            // writeCsv(mandor, filePath);
+            writeSummary(mandor, filePath);
+
         }
 
-        Mandor curMandor = mapMandor.get("Manggi");
+        Mandor curMandor = mapMandor.get("Security");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("17 Mar 2024");
-            end = dateFormat.parse("24 Mar 2024");
+            start = dateFormat.parse("01 Mar 2024");
+            end = dateFormat.parse("31 Mar 2024");
 
         } catch (Exception e) {
             System.out.println("ERROR!!");
@@ -379,6 +382,24 @@ public class TempoChecker {
 
     private static Boolean isWithinRange(Date current, Date start, Date end) {
         return current.compareTo(start) >= 0 && current.compareTo(end) <= 0;
+    }
+
+    private static void writeSummary(Mandor mandor, String filePath){
+        Path path = Paths.get(filePath);
+        Path root = path.getParent().getParent();
+
+        String writtenFilePathString = root.toString() + File.separator + "csv" + File.separator
+                + "SUMMARY_"+ path.getFileName();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(writtenFilePathString))) {
+            // Iterate through the List and write each element to the file with a new line
+            for (Tempo dataTempo : mandor.getListTempo()) {
+                writer.write(dataTempo.getWaktuTempo().toString()+","+dataTempo.getTotalTempo().toString());
+                writer.newLine();
+            }
+            System.out.println("Data has been written to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void writeValidatedCSV(Mandor mandor, String filePath) {
