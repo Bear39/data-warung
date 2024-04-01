@@ -337,12 +337,12 @@ public class TempoChecker {
 
         }
 
-        Mandor curMandor = mapMandor.get("Manggi");
+        Mandor curMandor = mapMandor.get("Security");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("01 Mar 2024");
-            end = dateFormat.parse("29 Mar 2024");
+            start = dateFormat.parse("28 Oct 2023");
+            end = dateFormat.parse("31 Oct 2023");
 
         } catch (Exception e) {
             System.out.println("ERROR!!");
