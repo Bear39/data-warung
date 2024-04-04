@@ -33,23 +33,22 @@ DETAIL:
 - Yoto: 1152
 
 NAMA: PURWADI (KAYU/BEKISTING SALUYU)
-PERIODE: 22 MAR 2024 - 02 APR 2024
-TOTAL: 3208
+PERIODE: 22 MAR 2024 - 04 APR 2024
+TOTAL: 3657
 DETAIL:
-- Aban: 24
-- Adam: 247
-- Aripin: 493
-- Asep B: 1141
+- Aban: 44
+- Adam: 331
+- Aripin: 496
+- Asep B: 1279
 - Fajar: 86
-- Joni: 118
-- Kholidin: 89
+- Joni: 294
+- Kholidin: 91
 - Lutfi Kh: 8
-- Nur Kholik: 116
-- Rozi: 371
-- Sholeh: 219
-- Sujito: 102
-- Teten: 83
-- joni: 111
+- Nur Kholik: 120
+- Rozi: 392
+- Sholeh: 241
+- Sujito: 134
+- Teten: 141
 
 NAMA: SUBADI (BESI APG)
 PERIODE: 09 MAR 2024 - 02 APR 2024
