@@ -6,6 +6,51 @@ NAMA: EKO (PELAKSANA)
 PERIODE: 01 NOV 2023 - 22 MAR 2024 (DATA: 02 APR 2024)
 TOTAL: 150
 
+NAMA: MANGGI (FINISHING/TUKANG APG)
+PERIODE: 01 MAR 2024 - 02 APR 2024
+TOTAL: 27678
+DETAIL:
+- Adin: 5706
+- Ambar: 1733
+- Bakir: 1198
+- Dani: 499
+- Edi: 2010
+- Gepeng: 1669
+- Handi: 878
+- Heri: 231
+- Irun: 1167
+- Jayen: 806
+- Mamat: 1786
+- Mukidin: 815
+- Mutoha: 705
+- Paiman: 341
+- Sair: 1144
+- Salim: 286
+- Sardon: 1684
+- Subari: 2003
+- Sugianto: 1104
+- Widi: 761
+- Yoto: 1152
+
+NAMA: PURWADI (KAYU/BEKISTING SALUYU)
+PERIODE: 22 MAR 2024 - 02 APR 2024
+TOTAL: 3208
+DETAIL:
+- Aban: 24
+- Adam: 247
+- Aripin: 493
+- Asep B: 1141
+- Fajar: 86
+- Joni: 118
+- Kholidin: 89
+- Lutfi Kh: 8
+- Nur Kholik: 116
+- Rozi: 371
+- Sholeh: 219
+- Sujito: 102
+- Teten: 83
+- joni: 111
+
 NAMA: SUBADI (BESI APG)
 PERIODE: 09 MAR 2024 - 02 APR 2024
 TOTAL: 54922
@@ -46,32 +91,6 @@ DETAIL:
 -- Kurang Periode (02 Des 2023 - 18 Jan 2024): 15800
 -- Kurang Periode (23 Feb 2024 - 08 Mar 2024): 3816
 
-NAMA: MANGGI (FINISHING/TUKANG APG)
-PERIODE: 01 MAR 2024 - 02 APR 2024
-TOTAL: 27678
-DETAIL:
-- Adin: 5706
-- Ambar: 1733
-- Bakir: 1198
-- Dani: 499
-- Edi: 2010
-- Gepeng: 1669
-- Handi: 878
-- Heri: 231
-- Irun: 1167
-- Jayen: 806
-- Mamat: 1786
-- Mukidin: 815
-- Mutoha: 705
-- Paiman: 341
-- Sair: 1144
-- Salim: 286
-- Sardon: 1684
-- Subari: 2003
-- Sugianto: 1104
-- Widi: 761
-- Yoto: 1152
-
 NAMA: SUGENG (COR APG)
 PERIODE: 25 MAR 2024 - 02 APR 2024
 TOTAL: 10550
@@ -87,7 +106,7 @@ DETAIL:
 -- Total Periode Sekarang: 4821
 -- Kurang Periode (01 Feb 2024 - 24 Mar 2024): 5729
 
-NAMA: IPIN (K3 APG)
+NAMA: IPIN (K3 SALUYU)
 PERIODE: 30 Mar 2024 - 02 APR 2024
 TOTAL: 164
 
