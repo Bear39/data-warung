@@ -333,16 +333,16 @@ public class TempoChecker {
                 writeError(errorMandor, filePath);
             }
             // writeCsv(mandor, filePath);
-            writeSummary(mandor, filePath);
+            // writeSummary(mandor, filePath);
 
         }
 
-        Mandor curMandor = mapMandor.get("Purwadi");
+        Mandor curMandor = mapMandor.get("Bambang");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("22 Mar 2024");
-            end = dateFormat.parse("04 Apr 2024"); 
+            start = dateFormat.parse("19 Apr 2024");
+            end = dateFormat.parse("24 Apr 2024"); 
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }
@@ -555,7 +555,7 @@ public class TempoChecker {
 
     private static boolean containsNonAlphabetic(String str) {
         // Use a regular expression to check for non-alphabetic characters
-        return !str.matches("[a-zA-Z0-9 ]+");
+        return !str.matches("[a-zA-Z0-9' ]+");
     }
 
 }
