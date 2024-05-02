@@ -7,193 +7,197 @@ PERIODE: 01 NOV 2023 - 22 MAR 2024 (DATA: 02 APR 2024)
 TOTAL: 150
 
 NAMA: ACENG (Listrik - YTI)
-PERIODE: 17 APR 2024 - 24 APR 2024
-TOTAL: 4750
+PERIODE: 17 APR 2024 - 30 APR 2024
+TOTAL: 7997
 DETAIL:
-- Aceng: 332
-- Agus: 183
+- Aceng: 423
+- Agus: 319
 - Ayo: 233
-- Aziz: 110
-- Dani: 397
-- Endang: 173
-- Erik: 203
-- Fajar: 307
-- Fikri: 319
-- Hari: 317
-- Idan: 307
-- Iki: 243
-- Ma'mun: 226
-- Muklis: 68
-- Mutori: 259
-- Riski: 288
-- Saman: 183
-- Suhaya: 148
-- Tarudin: 173
-- Uus: 281
+- Aziz: 328
+- Bayu: 24
+- D. Ramdani: 51
+- Dani: 686
+- Dede: 118
+- Endang: 327
+- Erik: 239
+- Fajar: 433
+- Fikri: 561
+- Hari: 483
+- Idan: 433
+- Iki: 517
+- Ma'mun: 470
+- Muklis: 204
+- Mutori: 503
+- Riski: 424
+- Saman: 231
+- Suhaya: 220
+- Tarudin: 245
+- Uus: 525
 
 NAMA: MANGGI (FINISHING/TUKANG - APG)
-PERIODE: 19 APR 2024 - 24 APR 2024
-TOTAL: 8927
+PERIODE: 19 APR 2024 - 30 APR 2024
+TOTAL: 6044
 DETAIL:
-- Adin: 429
-- Dani: 162
-- Didi: 68
-- Iwan: 68
-- Syair: 138
-- Yanto: 384
--- Total Periode Sekarang: 1249
--- Kurang Periode (01 Maret 2024 - 02 April 2024): 7678
+- Adin: 1512
+- Arip: 157
+- Arya: 245
+- Dani: 312
+- Didi: 527
+- Iwan: 442
+- Kamih: 195
+- Slamet: 1515
+- Syair: 330
+- Yanto: 809
 
 NAMA: FATONI ( - KPM)
-PERIODE: 22 APR 2024 - 24 APR 2024
-TOTAL: 798
+PERIODE: 22 APR 2024 - 30 APR 2024
+TOTAL: 2396
 DETAIL:
-- Aep: 180
-- Budi: 216
+- Aep: 657
+- Budi: 572
 - Coki: 6
-- Heri: 144
-- Iwan: 104
-- Kurdi: 124
+- Heri: 488
+- Iwan: 294
+- Kurdi: 355
 - Rudi: 24
 
-NAMA: BAMBANG (LISTRIK - YTI)
-PERIODE: 19 APR 2024 - 24 APR 2024
-TOTAL: 1294
-DETAIL:
-- Arif: 90
-- Eko: 294
-- Erik: 150
-- Fahrikin: 135
-- Nandar: 135
-- Sadeli: 187
-- Suandi: 150
-- Topik: 153
-
 NAMA: BAMBANG (PIPA - YTI)
-PERIODE: 20 APR 2024 - 24 APR 2024
-TOTAL: 2293
-DETAIL:
-- Dedi: 189
-- Deri: 285
-- Erlangga: 114
-- Idan: 220
-- Irpan: 190
-- Jepri: 207
-- Nur Khamid: 135
-- Rus: 33
-- Suryono: 60
-- Toha: 138
-- Ucid: 183
-- Ujang: 74
-- Yandi: 175
-- Zeki: 290
-
-NAMA: DEDE HIDAYAT (LISTRIK PIPA - Bumi Loka)
-PERIODE: 21 APR 2024 - 24 APR 2024
+PERIODE: 28 APR 2024 - 30 APR 2024
 TOTAL: 1334
 DETAIL:
-- Ade: 100
-- Asnawi: 132
-- Danu: 126
-- Dede: 214
-- Dedi: 159
-- Dedi L: 24
-- Idoy: 24
-- Imam: 48
-- Jenal: 76
-- Robi: 122
-- Sopandi: 177
-- Yadi: 132
+- Dedi: 69
+- Deri: 216
+- Erlangga: 131
+- Idan: 173
+- Irpan: 17
+- Jepri: 173
+- Nur Khamid: 59
+- Suryono: 45
+- Toha: 46
+- Ucid: 70
+- Ujang: 28
+- Yandi: 150
+- Zeki: 157
+
+NAMA: DEDE HIDAYAT (LISTRIK PIPA - Bumi Loka)
+PERIODE: 30 APR 2024 - 30 APR 2024
+TOTAL: 354
+DETAIL:
+- Ade: 24
+- Asnawi: 19
+- Danu: 29
+- Dede: 4
+- Dedi: 32
+- Munaji: 66
+- Robi: 24
+- Sopandi: 32
+- Sugeng: 24
+- Supardi: 63
+- Yadi: 37
 
 NAMA: PURWADI (KAYU/BEKISTING - SALUYU)
-PERIODE: 04 APR 2024 - 24 APR 2024
-TOTAL: 4665
+PERIODE: 04 APR 2024 - 30 APR 2024
+TOTAL: 7786
 DETAIL:
-- Agung B: 482
-- Agung Bandung: 361
-- Agus: 588
-- Aroy: 110
-- Asep B: 339
+- Agung B: 851
+- Agung Bandung: 624
+- Agus: 1084
+- Aroy: 269
+- Asep B: 368
 - Asep C: 111
-- Adam: 8
-- Atam: 86
-- Daryono: 88
-- Ical: 125
-- Jaelani: 208
-- Joni: 3
-- Kholidin: 4
-- Kurnia: 675
-- Misbah: 332
-- Nur Kholik: 12
+- Atam: 127
+- Daryono: 214
+- Fajar: 129
+- Ical: 234
+- Jaelani: 383
+- Kurnia: 1073
+- Misbah: 527
+- Nur Kholik: 66
+- Parjo: 16
 - Riyanto: 55
-- Rozi: 210
-- Sansan: 363
+- Rozi: 314
+- Sansan: 620
 - Sarana: 158
-- Sardi: 66
-- Sholeh: 164
-- Sujito: 26
-- Teten: 91
+- Sardi: 92
+- Sholeh: 281
+- Sujito: 66
+- Teten: 63
+-- Kurang Periode Ini: 7725
+-- Kurang Periode Lalu: 61
+-- Detail:
+--- Asep B: 14
+--- Adam: 8
+--- Joni: 3
+--- Kholidin: 4
+--- Sholeh: 4
+--- Teten: 28
+
 
 NAMA: SUBADI (BESI - APG)
-PERIODE: 03 MAR 2024 - 24 APR 2024
-TOTAL: 39990
+PERIODE: 03 APR 2024 - 30 APR 2024
+TOTAL: 53421
 DETAIL:
 - Alip: 99
-- Andres: 586
-- Anggi: 527
-- Apay: 68
-- Beta: 591
-- Bogor: 104
-- Dadan: 604
-- Dandi: 438
-- Dede: 649
+- Andres: 1024
+- Anggi: 930
+- Apay: 334
+- Beta: 1045
+- Bogor: 407
+- Dadan: 1156
+- Dandi: 867
+- Dede: 1101
 - Dono: 41
-- Eja: 663
-- Galuh: 644
-- Gunawan: 87
-- Hasan: 797
-- Hendi: 543
-- Herman: 553
-- Jamal: 349
-- Juber: 387
-- Latif: 649
-- Martin: 511
-- Nanang: 316
-- Parman: 510
-- Rahman: 792
-- Rozak: 475
-- Rus: 292
-- Said: 265
-- Sarana: 1355
-- Sofyan: 489
-- Solihin: 517
-- Sukro: 816
+- Eja: 1110
+- Galuh: 1116
+- Gunawan: 451
+- Hasan: 1322
+- Hendi: 994
+- Herman: 1198
+- Jamal: 767
+- Juber: 711
+- Latif: 1131
+- Martin: 1046
+- Nanang: 661
+- Parjo: 67
+- Parman: 868
+- Rahman: 1370
+- Rozak: 888
+- Rus: 780
+- Said: 570
+- Sarana: 2425
+- Sofyan: 974
+- Solihin: 999
+- Sukro: 1355
 - Ujang P: 144
-- Umar: 437
--- Total Periode Sekarang: 15298
+- Umar: 778
+-- Total Periode Sekarang: 28729
 -- Kurang Periode (02 Des 2023 - 18 Jan 2024): 15800
 -- Kurang Periode (23 Feb 2024 - 08 Mar 2024): 3816
 -- Kurang Periode (09 Mar 2024 - 02 Apr 2024): 5076
 
 NAMA: SUGENG (COR - APG)
-PERIODE: 05 APR 2024 - 24 APR 2024
-TOTAL: 2963
+PERIODE: 21 APR 2024 - 25 APR 2024
+TOTAL: 3235
 DETAIL:
-- Gentong: 150
-- Radit: 397
-- Riko: 262
-- Saip: 127
-- Sugeng: 714
--- Total Periode Sekarang: 1650
+- Gentong: 184
+- Radit: 434
+- Riko: 347
+- Saip: 157
+- Sugeng: 800
+-- Total Periode Sekarang: 1922
 -- Kurang Periode (25 Maret 2024 - 04 April 2024): 1313
 
+NAMA: TAUFIK (SAFETY - )
+PERIODE: 19 APR 2024 - 21 APR 2024 (DATA 30 APR 2024)
+TOTAL: 188
+
 NAMA: IPIN (K3 - SALUYU)
-PERIODE: 05 APR 2024 - 24 APR 2024
+PERIODE: 05 APR 2024 - 30 APR 2024
 TOTAL: 0
 
 NAMA: BABEH (K3 - APG)
-PERIODE: 02 APR 2024 - 24 APR 2024
-TOTAL: 85
+PERIODE: 30 MAR 2024 - 29 APR 2024
+TOTAL: 259
 
 NAMA: FAISAL (OPERATOR)
 PERIODE: 01 Mar 2024 - 24 APR 2024
@@ -201,33 +205,33 @@ TOTAL: 35
 - Kurang Periode Kemarin: 35
 
 NAMA: SAIMAN (OPERATOR)
-PERIODE: 29 Mar 2024 - 24 APR 2024
-TOTAL: 671
+PERIODE: 29 Apr 2024 - 29 APR 2024
+TOTAL: 101
 DETAIL:
-- Total Periode Sekarang: 660
-- Kurang Periode Kemarin: 11
+- Kurang Periode Kemarin: 101
 
 NAMA: BAMBANG (SECURITY)
-PERIODE: 30 MAR 2024 - 24 APR 2024
-TOTAL: 401
+PERIODE: 30 MAR 2024 - 29 APR 2024
+TOTAL: 436
 
 NAMA: RESNU (SECURITY)
-PERIODE: 20 JAN 2024 - 24 APR 2024
-TOTAL: 2269
+PERIODE: 20 JAN 2024 - 29 APR 2024
+TOTAL: 2355
 DETAIL:
 - Kurang Periode (16 NOV 2024 - 19 JAN 2024) : 251
-- Total Periode Sekarang: 2018
+- Total Periode Sekarang: 2104
 
 NAMA: ANNAS (SECURITY)
-PERIODE: 03 APR 2024 - 24 APR 2024
-TOTAL: 798
+PERIODE: 03 APR 2024 - 29 APR 2024
+TOTAL: 1080
 DETAIL:
-- Total Periode Sekarang: 216
+- Total Periode Sekarang: 498
 - Kurang Periode (01 Januari 2024 - 02 April) : 582
 
 NAMA: ALVIAN (SECURITY)
-PERIODE: 27 MAR 2024 - 24 APR 2024
-TOTAL: 841
+PERIODE: 25 APR 2024 - 29 APR 2024
+TOTAL: 294
+- Kurang Periode (27 MAR 2024 - 24 APR 2024): 141
 
 NAMA: AMIR (GUDANG)
 PERIODE: 14 JAN 2024 - 22 JAN 2024 (DATA: 24 APR 2024)
@@ -274,13 +278,13 @@ PERIODE: 15 JAN 2024 - 30 JAN 2024 (DATA: 24 APR 2024)
 TOTAL: 494
 
 NAMA: FIRMAN (POMPA - APG)
-PERIODE: 01 APR 2024 - 04 APR 2024
-TOTAL: 514
+PERIODE: 30 APR 2024 - 30 APR 2024
+TOTAL: 45
 
 NAMA: MUGO (POMPA - APG)
-PERIODE: 01 APR 2024 - 04 APR 2024
-TOTAL: 398
+PERIODE: 30 APR 2024 - 30 APR 2024
+TOTAL: 65
 
 NAMA: NANO (POMPA - APG)
-PERIODE: 01 APR 2024 - 04 APR 2024
-TOTAL: 409
+PERIODE: 30 APR 2024 - 30 APR 2024
+TOTAL: 57

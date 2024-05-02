@@ -337,12 +337,12 @@ public class TempoChecker {
 
         }
 
-        Mandor curMandor = mapMandor.get("Bambang");
+        Mandor curMandor = mapMandor.get("Security");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("19 Apr 2024");
-            end = dateFormat.parse("24 Apr 2024"); 
+            start = dateFormat.parse("25 Apr 2024");
+            end = dateFormat.parse("30 Apr 2024");
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }
@@ -383,16 +383,16 @@ public class TempoChecker {
         return current.compareTo(start) >= 0 && current.compareTo(end) <= 0;
     }
 
-    private static void writeSummary(Mandor mandor, String filePath){
+    private static void writeSummary(Mandor mandor, String filePath) {
         Path path = Paths.get(filePath);
         Path root = path.getParent().getParent();
 
         String writtenFilePathString = root.toString() + File.separator + "csv" + File.separator
-                + "SUMMARY_"+ path.getFileName();
+                + "SUMMARY_" + path.getFileName();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(writtenFilePathString))) {
             // Iterate through the List and write each element to the file with a new line
             for (Tempo dataTempo : mandor.getListTempo()) {
-                writer.write(dataTempo.getWaktuTempo().toString()+","+dataTempo.getTotalTempo().toString());
+                writer.write(dataTempo.getWaktuTempo().toString() + "," + dataTempo.getTotalTempo().toString());
                 writer.newLine();
             }
             System.out.println("Data has been written to the file successfully.");
@@ -555,7 +555,7 @@ public class TempoChecker {
 
     private static boolean containsNonAlphabetic(String str) {
         // Use a regular expression to check for non-alphabetic characters
-        return !str.matches("[a-zA-Z0-9' ]+");
+        return !str.matches("[a-zA-Z0-9'. ]+");
     }
 
 }
