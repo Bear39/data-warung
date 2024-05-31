@@ -74,7 +74,7 @@ public class TempoChecker {
         for (String fileName : rekapFilenames) {
             List<String> errorMandor = new ArrayList<>();
             List<String> errorPekerja = new ArrayList<>();
-            String mandorName = fileName.split(" ")[0];
+            String mandorName = fileName.split(" - ")[0];
             Mandor mandor = null;
             if (mapMandor.get(mandorName) != null) {
                 mandor = mapMandor.get(mandorName);
@@ -337,12 +337,12 @@ public class TempoChecker {
 
         }
 
-        Mandor curMandor = mapMandor.get("Security");
+        Mandor curMandor = mapMandor.get("Sunar");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("25 Apr 2024");
-            end = dateFormat.parse("30 Apr 2024");
+            start = dateFormat.parse("11 May 2024");
+            end = dateFormat.parse("30 May 2024");
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }
