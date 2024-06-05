@@ -75,15 +75,15 @@ DETAIL:
 ---------------------------------------------------------------
 NAMA: FATONI (BAJA & DINDING PRECAST - KPM)
 PERIODE: 19 MEI 2024 - 30 MEI 2024
-TOTAL: 4573
+TOTAL: 4896
 DETAIL:
-- Aep: 904
+- Aep: 969
 - Budi: 860
-- Empet: 442
-- Heri: 991
-- Iwan: 231
-- Kurdi: 491
-- Yudi: 654
+- Empet: 511
+- Heri: 1021
+- Iwan: 249
+- Kurdi: 549
+- Yudi: 737
 ---------------------------------------------------------------
 NAMA: HAJI SKUN (AZHARI) (LISTRIK - JTI)
 PERIODE: 10 MEI 2024 - 30 MEI 2024
@@ -120,32 +120,31 @@ DETAIL:
 -- Kurang Periode (30 APR 2024 - 09 MEI 2024): 3523
 ---------------------------------------------------------------
 NAMA: MANGGI (FINISHING & TUKANG - APG)
-PERIODE: 19 APR 2024 - 30 MAY 2024
-TOTAL: 41230
+PERIODE: 04 MEI 2024 - 04 JUNI 2024
+TOTAL: 36606
 DETAIL:
-- Adin: 1512
-- Amin: 1182
-- Arip: 1150
-- Arya: 1579
-- Asep: 1623
-- Baut: 203
-- Boyo: 360
-- Dani: 954
-- Didi: 2685
-- Gunawan: 2458
-- Heri: 2329
-- Iwan: 2477
-- Kamih: 2079
-- Kebo: 2322
-- Kuntreng: 2589
-- Paiman: 2223
-- Riyadi: 1881
-- Slamet: 5498
-- Suryadi: 112
-- Syair: 1716
-- Tepos: 118
-- Udin: 1331
-- Yanto: 2849
+- Amin: 1481
+- Arip: 803
+- Arya: 1054
+- Asep: 1635
+- Baut: 349
+- Boyo: 536
+- Dani: 652
+- Didi: 2178
+- Gunawan: 2699
+- Heri: 2707
+- Iwan: 2093
+- Kamih: 1906
+- Kebo: 2644
+- Kuntreng: 2928
+- Paiman: 2459
+- Riyadi: 1992
+- Slamet: 3200
+- Suryadi: 153
+- Syair: 1429
+- Tepos: 214
+- Udin: 1431
+- Yanto: 2063
 ---------------------------------------------------------------
 NAMA: PARJO ( - )
 PERIODE: 16 JAN 2024 - 16 JAN 2024
