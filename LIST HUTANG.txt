@@ -1,77 +1,75 @@
 NAMA: ACENG (LISTRIK - JTI)
-PERIODE: 11 MEI 2024 - 30 MEI 2024
-TOTAL: 7516
+PERIODE: 25 MEI 2024 - 08 JUNI 2024 
+TOTAL: 5704
 DETAIL:
-- Aceng: 757
-- Agus: 247
-- Aziz: 560
-- Dani: 743
-- Dede: 845
-- Endang: 337
-- Fajar: 442
-- Fikri: 654
-- Iqbal: 137
-- Ma'mun: 649
-- Matori: 139
-- Muklis: 208
-- Pardi: 51
-- Riski: 131
-- Rizki: 380
-- Tarudin: 535
-- Uus: 701
+- Aceng: 332
+- Agus: 139
+- Aziz: 333
+- Dani: 282
+- Dede: 385
+- Endang: 166
+- Fajar: 635
+- Fikri: 108
+- Iqbal: 246
+- Ma'mun: 254
+- Muklis: 92
+- Pardi: 142/
+- Rizki: 228
+- Tarudin: 456
+- Uus: 305
+total: 4103
+-- Kurang Tagih Periode (11 May 2024 - 25 May 2024): 1601
 ---------------------------------------------------------------
 NAMA: AMIN (PLAFON - SUMERLINDO)
-PERIODE: 19 MEI 2024 - 30 MEI 2024
-TOTAL: 883
+PERIODE: 31 MEI 2024 - 01 JUNI 2024
+TOTAL: 205
 DETAIL:
-- Adi: 466
-- Ahmad: 311
-- Amin: 106
+- Adi: 92
+- Ahmad: 99
+- Amin: 14
 ---------------------------------------------------------------
 NAMA: AROY ( - )
 PERIODE: 15 DEC 2023 - 15 DEC 2023
 TOTAL: 0
 ---------------------------------------------------------------
 NAMA: BAMBANG (PIPA - JTI)
-PERIODE: 12 MEI 2024 - 30 MEI 2024
-TOTAL: 6850
+PERIODE: 26 MEI 2024 - 07 JUNI 2024
+TOTAL: 3086
 DETAIL:
-- Ade: 44
-- Adistia: 18
-- Dede: 36
-- Dedi: 471
-- Erlangga: 449
-- Hermawan: 164
-- Idan: 317
-- Irpan: 597
-- Jepri: 703
-- Jeri: 1162
-- Nur Khamid: 608
-- Toha: 490
-- Ucid: 164
-- Ujang: 13
-- Yandi: 608
-- Zeki: 1006
+- Erlangga: 309
+- Faldi: 126
+- Jepri: 452
+- Jeri: 506
+- Kamih: 45
+- Kusnani: 160
+- Nur Khamid: 402
+- Saefudin: 166
+- Yandi: 366
+- Zeki: 554
 ---------------------------------------------------------------
 NAMA: DEDE HIDAYAT (LISTRIK & PIPA - Bumiloka)
-PERIODE: 25 MEI 2024 - 30 MEI 2024
-TOTAL: 2232
+PERIODE: 25 MEI 2024 - 07 JUNI 2024
+TOTAL: 5757
 DETAIL:
-- Asnawi: 152
+- Ade: 114
+- Asnawi: 464
 - Danu: 80
 - Dede: 23
 - Dedi: 40
 - Faiz: 35
-- Fariz: 323
-- Jono: 279
-- Maman: 24
-- Munaji: 321
-- Supardi: 281
+- Fariz: 748
+- Jono: 622
+- Maman: 299
+- Munaji: 651
+- Robi: 113
+- Sopandi: 138
+- Supardi: 606
 - Topik: 42
-- Uus: 24
-- Wandi: 422
+- Uus: 292
+- Wandi: 981
+- Wawan: 149
 - Yadi: 60
-- Yudo: 126
+- Yudo: 300
 ---------------------------------------------------------------
 NAMA: FATONI (BAJA & DINDING PRECAST - KPM)
 PERIODE: 19 MEI 2024 - 30 MEI 2024
@@ -86,38 +84,40 @@ DETAIL:
 - Yudi: 737
 ---------------------------------------------------------------
 NAMA: HAJI SKUN (AZHARI) (LISTRIK - JTI)
-PERIODE: 10 MEI 2024 - 30 MEI 2024
-TOTAL: 28669
+PERIODE: 24 MEI 2024 - 06 JUNI 2024
+TOTAL: 15793
 DETAIL:
-- Ade: 716
-- Adit: 34
-- Agung: 867
-- Arif: 840
-- Asep: 473
-- Azhari: 1580
-- Bagas: 734
-- Dani: 66
-- Didi: 1950
-- Faisal: 200
-- Fiki: 1150
-- Habib: 1443
-- Heri: 442
-- Ibnu: 888
-- Indra: 931
-- Ratimin: 1317
-- Rifki: 1437
-- Riski: 23
-- Samuti: 1597
-- Sarwedi: 595
-- Slamet: 342
-- Sobirin: 1409
-- Subhan: 1790
-- Topik: 786
-- Ubay: 26
-- Umam: 1670
-- Yunus: 1840
--- Total Periode Sekarang: 25146
--- Kurang Periode (30 APR 2024 - 09 MEI 2024): 3523
+- Ade: 483
+- Agung: 616
+- Agus: 131
+- Andika: 20
+- Arif: 284
+- Asep: 23
+- Azhari: 959
+- Bagas: 435
+- Dani: 171
+- Didi: 857
+- Edih: 20
+- Faisal: 441
+- Fiki: 630
+- Habib: 769
+- Heri: 269
+- Ibnu: 445
+- Indra: 602
+- Mahmud: 71
+- Ratimin: 766
+- Rifki: 794
+- Samuti: 588
+- Sarwedi: 301
+- Slamet: 86
+- Sobirin: 853
+- Subhan: 620
+- Topik: 432
+- Ubay: 156
+- Umam: 763
+- Yunus: 907
+-- Total Periode Sekarang: 13492
+-- Kurang Periode (10 MAY 2024 - 23 MEI 2024): 2301
 ---------------------------------------------------------------
 NAMA: MANGGI (FINISHING & TUKANG - APG)
 PERIODE: 04 MEI 2024 - 04 JUNI 2024
