@@ -334,15 +334,14 @@ public class TempoChecker {
             }
             // writeCsv(mandor, filePath);
             // writeSummary(mandor, filePath);
-
         }
 
-        Mandor curMandor = mapMandor.get("Bambang");
+        Mandor curMandor = mapMandor.get("Aceng");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("26 May 2024");
-            end = dateFormat.parse("07 June 2024");
+            start = dateFormat.parse("11 May 2024");
+            end = dateFormat.parse("24 May 2024");
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }
