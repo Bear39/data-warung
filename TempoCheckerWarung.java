@@ -333,15 +333,15 @@ public class TempoCheckerWarung {
                 writeError(errorMandor, filePath);
             }
             // writeCsv(mandor, filePath);
-            writeSummary(mandor, filePath);
+            // writeSummary(mandor, filePath);
         }
 
-        Mandor curMandor = mapMandor.get("Bambang");
+        Mandor curMandor = mapMandor.get("Fatoni");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("08 June 2024");
-            end = dateFormat.parse("22 June 2024");
+            start = dateFormat.parse("14 July 2024");
+            end = dateFormat.parse("24 July 2024");
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }

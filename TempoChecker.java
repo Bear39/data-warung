@@ -340,8 +340,8 @@ public class TempoChecker {
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("11 May 2024");
-            end = dateFormat.parse("18 July 2024");
+            start = dateFormat.parse("15 July 2024");
+            end = dateFormat.parse("25 July 2024");
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }
