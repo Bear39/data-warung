@@ -1,29 +1,29 @@
 NAMA: ACENG (LISTRIK - JTI)
-TOTAL: 9360
+TOTAL: 5617
 
 PERIODE: 26 JULI 2024 - 11 AGUSTUS 2024 
-TOTAL: 5156
+TOTAL: 5617
 DETAIL:
-- Aceng: 354
-- Aih: 219
-- Aldi: 425
-- Aziz: 356
-- Dede: 408
-- Edi: 303
-- Fariz: 132
+- Aceng: 388
+- Aih: 252
+- Aldi: 462
+- Aziz: 389
+- Dede: 441
+- Edi: 326
+- Fariz: 165
 - Fikri: 18
 - Hamdan: 44
 - Ikbal: 12
 - Iqbal: 185
-- Ma'mun: 427
-- Malik: 132
+- Ma'mun: 460
+- Malik: 165
 - Muklis: 12
 - Pais: 16
 - Pardi: 217
-- Saman: 723
-- Sonhadi: 527
-- Tarudin: 153
-- Uus: 493
+- Saman: 797
+- Sonhadi: 560
+- Tarudin: 182
+- Uus: 526
 ---------------------------------------------------------------
 NAMA: AMIN (PLAFON - SUMERLINDO) - APG
 TOTAL: 8753
@@ -81,32 +81,32 @@ DETAIL:
 - Yandi: 230
 ---------------------------------------------------------------
 NAMA: DEDE HIDAYAT (LISTRIK & PIPA - Bumiloka) - APG
-TOTAL: 6391
+TOTAL: 7016
 
-PERIODE: 03 AGUSTUS 2024 - 11 AGUSTUS 2024
-TOTAL: 6391
+PERIODE: 03 AGUSTUS 2024 - 12 AGUSTUS 2024
+TOTAL: 7016
 DETAIL:
-- Asnawi: 542
+- Asnawi: 613
 - Ayi: 19
-- Azid: 360
+- Azid: 415
 - Cecep: 230
-- Dasep: 513
+- Dasep: 570
 - Dede: 42
-- Diki: 562
+- Diki: 585
 - Edi: 20
 - Fariz: 158
-- Gilang: 270
-- Izam: 392
-- Jono: 557
-- Maman: 582
-- Munaji: 511
+- Gilang: 296
+- Izam: 444
+- Jono: 627
+- Maman: 645
+- Munaji: 577
 - Rustandi: 86
 - Satum: 451
-- Supardi: 582
-- Uus: 514
+- Supardi: 654
+- Uus: 584
 -------------------------------------------------------------
 NAMA: E'ES ( LISTRIK - JTI )
-TOTAL: 32171
+TOTAL: 38366
 
 PERIODE: 24 JUNI 2024 - 26 JULI 2024
 TOTAL: 33.942.000
@@ -138,17 +138,17 @@ DETAIL:
 - Yono: 1.753.000
 - Yusup: 1.460.000
 
-PERIODE: 27 JULI 2024 - 11 AGUSTUS 2024
-TOTAL: 4.173.000
+PERIODE: 27 JULI 2024 - 12 AGUSTUS 2024
+TOTAL: 4424
 DETAIL:
-- Azhari: 213.000
-- Gofur: 42.000
-- Heri: 445.000
-- Heri B: 377.000
-- MZ: 840.000
-- Obes: 634.000
-- Roy: 824.000
-- Yandi: 798.000
+- Azhari: 221
+- Gofur: 42
+- Heri: 463
+- Heri B: 414
+- MZ: 888
+- Obes: 698
+- Roy: 864
+- Yandi: 834
 -------------------------------------------------------------
 NAMA: FATONI (BAJA & DINDING PRECAST - KPM)
 TOTAL: 9506
@@ -293,20 +293,21 @@ DETAIL:
 
 ---------------------------------------------------------------
 NAMA: NURDIN (CAT - WSK)
-TOTAL: 2120
+TOTAL: 3151
 
-PERIODE: 03 AGUSTUS 2024 - 08 AGUSTUS 2024
-TOTAL: 0
+PERIODE: 03 AGUSTUS 2024 - 12 AGUSTUS 2024
+TOTAL: 3151
 DETAIL:
-- Adi: 14
-- Alip: 285
-- Cepi: 320
-- Dikin: 154
-- Ian: 311
-- Noval: 398
-- Nurdin: 339
-- Riski: 32
-- Samsudin: 267
+- Adi: 55
+- Alip: 405
+- Cepi: 477
+- Dikin: 271
+- Fikri: 8
+- Ian: 446
+- Noval: 561
+- Nurdin: 474
+- Riski: 78
+- Samsudin: 376
 ---------------------------------------------------------------
 NAMA: PARJO ( - )
 PERIODE: 16 JAN 2024 - 16 JAN 2024
@@ -433,7 +434,7 @@ DETAIL:
 - TOTAL: 355
 ----------------------------------------
 - NAMA: WANTO ()
-- PERIODE: 07 AGUSTUS 2024 - 08 AGUSTUS 2024
+- PERIODE: 07 AGUSTUS 2024 - 12 AGUSTUS 2024
 - TOTAL: 44
 
 ---------------------------------------------------------------
