@@ -336,12 +336,12 @@ public class TempoCheckerWarung {
             // writeSummary(mandor, filePath);
         }
 
-        Mandor curMandor = mapMandor.get("Nurdin");
+        Mandor curMandor = mapMandor.get("Haji Skun");
         Date start = null;
         Date end = null;
         try {
-            start = dateFormat.parse("03 Aug 2024");
-            end = dateFormat.parse("15 Aug 2024");
+            start = dateFormat.parse("19 Jul 2024");
+            end = dateFormat.parse("1 Aug 2024");
         } catch (Exception e) {
             System.out.println("ERROR!!");
         }
