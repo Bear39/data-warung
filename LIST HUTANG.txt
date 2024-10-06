@@ -1,32 +1,32 @@
+TOTAL PIUTANG: 172671
+---------------------------------------------------------------
 NAMA: ACENG (LISTRIK - JTI)
-TOTAL: 8854
+TOTAL: 6530
 
 NAMA: ACENG
-PERIODE: 18 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 8854
+PERIODE: 18 AUGUST 2024 - 01 SEPTEMBER 2024
+TOTAL: 1000
 DETAIL:
-- Aceng: 1032
-- Aih: 374
-- Alung: 337
-- Aziz: 428
-- Dede: 811
-- Fariz: 531
-- Hari: 426
-- Iqbal: 109
-- Ma'mun: 676
-- Malik: 708
+- Kurang Bayar: 1000
+
+NAMA: ACENG
+PERIODE: 02 SEPTEMBER 2024 - 03 OCTOBER 2024
+TOTAL: 5530
+DETAIL:
+- Aceng: 1019
+- Aziz: 459
+- Dede: 782
+- Hari: 755
+- Ma'mun: 649
 - Pais: 15
-- Pardi: 246
-- Saman: 528
-- Sonhadi: 405
+- Pardi: 131
 - Suhaya: 15
-- Tarudin: 825
-- Uus: 654
-- Yoko: 734
+- Uus: 746
+- Yoko: 959
 
 ---------------------------------------------------------------
 NAMA: AMIN (PLAFON - SUMERLINDO) - APG
-TOTAL: 12659
+TOTAL: 19494 + 30 Okt (butuh revisi)
 
 PERIODE: 03 AUGUST 2024 - 28 AUGUST 2024
 TOTAL: 4973
@@ -34,26 +34,45 @@ DETAIL:
 - Kurang Bayar: 4973
 
 NAMA: AMIN
-PERIODE: 29 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 7686
+PERIODE: 29 AUGUST 2024 - 29 SEPTEMBER 2024
+TOTAL: 12873
 DETAIL:
-- Adi: 436
-- Ahmad: 570
-- Amin: 317
-- Defran: 709
-- Diki: 23
-- Muhdi: 509
-- Oka: 1253
+- Adi: 564
+- Ahmad: 805
+- Amin: 465
+- Defran: 1161
+- Diki: 290
+- Muhdi: 816
+- Oka: 1757
 - Ridwan: 146
 - Rohman: 115
-- Ropi: 338
-- Sadi: 527
+- Ropi: 653
+- Sadi: 1009
 - Saprol: 106
-- Sapta: 721
-- Sueb: 365
-- Sukri: 234
-- Wawan: 1200
+- Sapta: 1221
+- Sueb: 1026
+- Sukri: 529
+- Unyil: 306
+- Wawan: 1787
 - Yadi: 117
+
+PERIODE: 30 SEPTEMBER 2024 (BUTUH REVISI)
+
+PERIODE: 01 OCTOBER 2024 - 03 OCTOBER 2024
+TOTAL: 1648
+DETAIL:
+- Adi: 164
+- Ahmad: 84
+- Defran: 129
+- Diki: 97
+- Muhdi: 85
+- Oka: 152
+- Ropi: 101
+- Sadi: 177
+- Sapta: 148
+- Sukri: 181
+- Unyil: 105
+- Wawan: 225
 
 ---------------------------------------------------------------
 NAMA: ANDRE (CAT - WSK) - APG
@@ -80,7 +99,7 @@ DETAIL:
 
 ---------------------------------------------------------------
 NAMA: DEDE HIDAYAT (LISTRIK & PIPA - Bumiloka) - APG
-TOTAL: 12604
+TOTAL: 11537
 
 PERIODE: 03 AGUSTUS 2024 - 16 AGUSTUS 2024
 TOTAL: 250
@@ -95,99 +114,95 @@ DETAIL:
 - Supardi: 43
 
 NAMA: DEDE
-PERIODE: 31 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 12354
+PERIODE: 14 SEPTEMBER 2024 - 03 OCTOBER 2024
+TOTAL: 11287
 DETAIL:
-- Asna: 496
-- Asnawi: 955
-- Azid: 884
-- Dasep: 1273
-- Dede: 94
-- Diki: 782
-- Gilang: 670
-- Izam: 861
-- Jayadi: 795
-- Jono: 1072
-- Maman: 1109
-- Munaji: 1265
-- Supardi: 1125
-- Uus: 973
+- Asna: 495
+- Asnawi: 780
+- Azid: 761
+- Dasep: 1330
+- Dede: 180
+- Diki: 413
+- Gilang: 288
+- Izam: 774
+- Jayadi: 776
+- Jono: 836
+- Maman: 1154
+- Munaji: 1332
+- Sugianto: 180
+- Supardi: 1067
+- Uus: 921
 -------------------------------------------------------------
 NAMA: E'ES ( LISTRIK - JTI )
-TOTAL: 25452
+TOTAL: 19370
 
-PERIODE: 24 JUNI 2024 - 26 AGUSTUS 2024
-TOTAL: 20149
+PERIODE: 24 JUNI 2024 - 26 SEPTEMBER 2024
+TOTAL: 16943
 DETAIL:
--- Kurang Periode Sekarang: 20149
+-- Kurang Periode Sekarang: 16943
 
-NAMA: E'ES
-PERIODE: 27 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 5303
+PERIODE: 27 SEPTEMBER 2024 - 03 OCTOBER 2024
+TOTAL: 2427
 DETAIL:
-- Aldi: 782
-- Asep: 175
-- Gofur: 58
-- Haikal: 496
-- Heri: 38
-- Hilman: 79
-- Imar: 123
-- MZ: 161
-- Nugi: 286
-- Obes: 53
-- Perdi: 84
-- Pinto: 964
-- Pipin: 1125
-- Roy: 483
-- Saeful: 179
-- Salwan: 217
+- Aldi: 509
+- Andre: 5
+- Asep: 126
+- Daniel: 157
+- Gofur: 297
+- Haikal: 237
+- Hilman: 157
+- Imar: 280
+- Noval: 299
+- Pipin: 68
+- Roy: 160
+- Samsul: 132
 
 -------------------------------------------------------------
 NAMA: FATONI (BAJA & DINDING PRECAST - KPM)
-TOTAL: 4034
+TOTAL: 4163
 
 PERIODE: 16 AUGUST 2024 - 30 AUGUST 2024
 TOTAL: 243
 DETAIL:
 - Kurang Periode: 243
 
-PERIODE: 31 AUGUST 2024 - 18 SEPTEMBER 2024
-TOTAL: 3791
+PERIODE: 31 AUGUST 2024 - 03 OCTOBER 2024
+TOTAL: 3920
 DETAIL:
 - Ade: 1061
-- Arya: 230
+- Arya: 274
 - Iwan: 94
 - Kaerul: 908
 - Riki: 1273
-- Tedi: 225
+- Sofyan: 40
+- Tedi: 270
 
 ---------------------------------------------------------------
 NAMA: HAJI SKUN (AZHARI) (LISTRIK - JTI)
-TOTAL: 28376
+TOTAL: 36471
 
 PERIODE: 19 JULI 2024 - 29 AGUSTUS 2024 
 TOTAL: 13424
 DETAIL:
 - Kurang Periode Ini: 13424
 
-NAMA: HAJI SKUN
-PERIODE: 30 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 14952
+PERIODE: 30 AUGUST 2024 - 03 OCTOBER 2024
+TOTAL: 23047
 DETAIL:
-- Agung: 202
-- Azhari: 447
-- Badri: 1258
+- Agung: 227
+- Azhari: 513
+- Badri: 2068
 - Dani: 201
-- Iki: 1678
-- Ilham: 759
-- Mahmud: 1811
-- Mujahidin: 1267
-- Mukidin: 1606
-- Mukmin: 1803
-- Mulyadi: 1726
-- Rifki: 1130
+- Iki: 2442
+- Ilham: 998
+- Mahmud: 2983
+- Mujahidin: 2108
+- Mukidin: 2478
+- Mukmin: 2786
+- Mulyadi: 2552
+- Rifki: 1752
 - Sadam: 278
-- Yugo: 786
+- Yugo: 1661
 
 ---------------------------------------------------------------
 NAMA: HERI (  -  )
@@ -204,90 +219,120 @@ DETAIL:
 
 -----------------------------------------------------------------
 NAMA: INDRA ( GRC - FARACCON )
-TOTAL: 5960
+TOTAL: 8166
 
 NAMA: INDRA
-PERIODE: 21 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 5960
+PERIODE: 21 AUGUST 2024 - 03 OCTOBER 2024
+TOTAL: 8166
 DETAIL:
-- Hasim: 928
-- Ibnu: 1372
-- Indra: 580
-- Jay: 1431
-- Robi: 965
-- Sadat: 636
-- Sarana: 48
+- Hasim: 1914
+- Ibnu: 2367
+- Indra: 1104
+- Jay: 1065
+- Robi: 584
+- Sadat: 1052
+- Sarana: 96
 
 -----------------------------------------------------------------
 NAMA: MANGGI (AHMADUN) (FINISHING & TUKANG - APG)
-TOTAL: 38870
+TOTAL: 44424
 
-PERIODE: 30 AUGUST 2024 - 19 SEPTEMBER 2024
-TOTAL: 38870
+PERIODE: 06 JULY 2024 - 19 JULY 2024
+TOTAL: 28
 DETAIL:
-- Ade: 1375
-- Agung: 1477
-- Amin: 722
-- Andi: 1360
-- Ari: 195
-- Badrun: 497
-- Bahul: 777
-- Baut: 914
-- Boyo: 1014
-- Bupak: 1416
-- Candolo: 342
-- Darhani: 399
-- Dika: 297
-- Drajat: 840
-- Edo: 1738
-- Fatur: 1268
-- Galang: 1047
-- Hermansyah: 434
-- Heru: 394
-- Ijang: 1430
-- Ikhsan: 209
-- Ilham: 1010
-- Jenggot: 1340
-- Khamid: 264
-- Mail: 282
-- Mulyono: 2037
-- Neni: 61
-- Nurman: 464
-- Omblo: 1085
-- Opik: 305
-- Parto: 1199
-- Riyadi: 1300
-- Rohman: 1276
-- Roni: 1300
-- Rukun: 283
-- Sahiro: 578
-- Santo: 1321
-- Sanul: 27
-- Sarana: 1718
-- Sutris: 659
-- Syair: 772
-- Topik: 683
-- Tupeng: 1437
+- Kurang Bayar: 28
+
+PERIODE: 30 AUGUST 2024 - 30 AUGUST 2024
+TOTAL: 1610
+DETAIL:
+- Ade: 182
+- Agung: 80
+- Andi: 83
+- Badrun: 98
+- Baut: 64
+- Boyo: 96
+- Edo: 57
+- Ijang: 196
+- Jenggot: 65
+- Mulyono: 90
+- Nurman: 61
+- Omblo: 63
+- Parto: 46
+- Riyadi: 83
+- Santo: 85
+- Sarana: 59
+- Syair: 25
+- Topik: 57
+- Tupeng: 65
 - Ugih: 55
-- Wahab: 283
-- Warsih: 95
-- Yoha: 577
-- Zamroni: 314
+
+PERIODE: 14 SEPTEMBER 2024 - 03 OCTOBER 2024
+TOTAL: 42786
+DETAIL:
+- Abrori: 693
+- Agung: 240
+- Agus: 410
+- Amin: 1658
+- Andi: 33
+- Ari: 1213
+- Baut: 784
+- Bongkeng: 20
+- Boyo: 1336
+- Bupak: 1255
+- Candolo: 1132
+- Darhani: 858
+- Darto: 289
+- Dika: 841
+- Drajat: 970
+- Edo: 316
+- Fatur: 1303
+- Galang: 1402
+- Herman: 1385
+- Hermansyah: 1110
+- Heru: 394
+- Ijang: 1450
+- Ikhsan: 581
+- Ilham: 1964
+- Iman: 355
+- Iwan: 81
+- Jayus: 856
+- Jenggot: 293
+- Jos: 769
+- Khamid: 1208
+- Mail: 1008
+- Mulyono: 1956
+- Neni: 204
+- Omblo: 52
+- Opik: 513
+- Ozan: 24
+- Parto: 33
+- Ridwan: 80
+- Riyadi: 103
+- Rohman: 1113
+- Roni: 1590
+- Rukun: 1202
+- Sadul: 786
+- Santo: 195
+- Sanul: 44
+- Sarana: 2233
+- Syair: 860
+- Tupeng: 33
+- Udin: 86
+- Umar: 485
+- Uyu: 1407
+- Wahab: 959
+- Warsih: 149
+- Yoha: 1168
+- Zamroni: 1304
 
 ---------------------------------------------------------------
 NAMA: NURDIN (CAT - WSK)
-TOTAL: 366
+TOTAL: 82
 
-PERIODE: 14 SEPTEMBER 2024 - 19 SEPTEMBER 2024
-TOTAL: 366
+PERIODE: 28 SEPTEMBER 2024 - 01 OCTOBER 2024
+TOTAL: 82
 DETAIL:
-- Abdul: 42
-- Adi: 52
-- Agus: 70
-- Alip: 6
-- Ian: 20
-- Noval: 22
-- Nurdin: 154
+- Dikin: 82
 
 ---------------------------------------------------------------
 NAMA: PARJO ( - )
@@ -358,37 +403,42 @@ TOTAL: 4105
 
 ---------------------------------------------------------------
 NAMA: PERORANGAN-2
-TOTAL: 1581 (TIDAK TERMASUK OKIL)
-DETAIL:
-
+TOTAL: 1965 (TIDAK TERMASUK OKIL)
+DETAIL: 
+----------------------------------------
 - NAMA: ASEP ()
-- PERIODE: 23 AGUSTUS 2024 - 26 AGUSTUS 2024
-- TOTAL: 150
+- TOTAL: 413
+
+- PERIODE: 23 AGUSTUS 2024 - 12 SEPTEMBER 2024
+- TOTAL: 250 (Kurang Bayar)
+
+- PERIODE: 13 SEPTEMBER 2024 - 03 OCTOBER 2024
+- TOTAL: 163
 ----------------------------------------
 - NAMA: ATAM ()
 - PERIODE: 26 JULI 2024 - 26 JULI 2024 (DATA: 26 AGUSTUS 2024)
 - TOTAL: 0
 ----------------------------------------
+- NAMA: CITOY ()
+- PERIODE: 13 SEPTEMBER 2024 - 03 OCTOBER 2024
+- TOTAL: 15
+----------------------------------------
 - NAMA: FAISAL (OPERATOR)
-- PERIODE: 01 MAR 2024 - 01 MAR 2024
-- TOTAL: 406
+- TOTAL: 529
 
-- TOTAL: 35
-- - Kurang Periode (25 JAN 2024 - 29 FEB 2024): 35
+- PERIODE: 01 MAR 2024 - 08 SEPTEMBER 2024
+- TOTAL: 25 (Kurang Bayar)
 
-- PERIODE: 02 MAR 2024 - 06 AUG 2024 
-- TOTAL: 0
-
-- PERIODE: 07 AGUSTUS 2024 - 26 AGUSTUS 2024 
-- TOTAL: 371
+- PERIODE: 09 SEPTEMBER 2024 - 03 OCTOBER 2024 
+- TOTAL: 504
 ----------------------------------------
 - NAMA: IPIN (K3 - SALUYU)
 - PERIODE: 05 APR 2024 - 05 APR 2024 (DATA: 26 AGUSTUS 2024)
 - TOTAL: 0
 ----------------------------------------
 - NAMA: OKIL (OPERASIONAL - WARUNG PEKERJA BINTARO)
-- PERIODE: 14 DES 2023 - 26 AGUSTUS 2024
-- TOTAL: 1742
+- PERIODE: 14 DES 2023 - 03 OCTOBER 2024
+- TOTAL: 2209
 ----------------------------------------
 - NAMA: ROSIIN ( - )
 - PERIODE: 01 JAN 2024 - 01 JAN 2024 (DATA: 26 AGUSTUS 2024)
@@ -403,89 +453,116 @@ DETAIL:
 - TOTAL: 188
 ----------------------------------------
 - NAMA: SAIMAN (OPERATOR)
--- TOTAL: 482
+-- TOTAL: 409
 
--- PERIODE: 30 JUNI 2024 - 06 AGUSTUS 2024
--- TOTAL: 20
--- DETAIL:
---- Kurang Periode Sekarang: 20
+-- PERIODE: 07 AGUSTUS 2024 - 08 SEPTEMBER 2024
+-- TOTAL: 69 (Kurang Bayar)
 
--- PERIODE: 07 AGUSTUS 2024 - 26 AGUSTUS 2024
--- TOTAL: 462
+-- PERIODE: 09 SEPTEMBER 2024 - 03 OCTOBER 2024
+-- TOTAL: 340
 ----------------------------------------
 - NAMA: UJANG P ()
 - PERIODE: 30 JUN 2024 - 09 JULI 2024 (DATA: 26 AGUSTUS 2024)
 - TOTAL: 355
 ----------------------------------------
 - NAMA: WANTO ()
-- PERIODE: 11 AGUSTUS 2024 - 26 AGUSTUS 2024
-- TOTAL: 0
+- PERIODE: 11 AGUSTUS 2024 - 03 OCTOBER 2024
+- TOTAL: 56
 
 ---------------------------------------------------------------
 NAMA: PURWADI (KAYU & BEKISTING - SALUYU)
-TOTAL: 651
+TOTAL: 1032
 
-PERIODE: 24 JULI 2024 - 14 AGUSTUS 2024
-TOTAL: 651
+PERIODE: 15 AUGUST 2024 - 16 SEPTEMBER 2024
+TOTAL: 170
 DETAIL:
-- Rozi: 218
-- Sholeh: 433
+- Rozi: 81
+- Sholeh: 89
+
+PERIODE: 17 SEPTEMBER 2024 - 27 SEPTEMBER 2024
+TOTAL: 55
+DETAIL:
+- Kurang Periode Ini: 55
+
+PERIODE: 28 SEPTEMBER 2024 - 03 OCTOBER 2024
+TOTAL: 807
+DETAIL:
+- Atam: 143
+- Sarana: 165
+- Sholeh: 499
+
+---------------------------------------------------------------
+NAMA: ROHIM
+TOTAL: 460
+
+PERIODE: 19 SEPTEMBER 2024 - 27 SEPTEMBER 2024
+TOTAL: 460
+DETAIL:
+- Jaka: 460
 
 ---------------------------------------------------------------
 NAMA: RUDI ( KAYU (PINTU) - DONGSEO )
-TOTAL: 1333
-
-PERIODE: 01 AGUSTUS 2024 - 05 Sep 2024
-TOTAL: 483
-DETAIL:
-- Kurang periode ini: 483
+TOTAL: 716
 
 NAMA: RUDI
-PERIODE: 06 SEPTEMBER 2024 - 19 SEPTEMBER 2024
-TOTAL: 850
+PERIODE: 06 SEPTEMBER 2024 - 24 SEPTEMBER 2024
+TOTAL: 90
 DETAIL:
-- Faris: 238
-- Rudi: 475
-- Yanto: 137
+- Kurang Periode Ini: 90
+
+NAMA: RUDI
+PERIODE: 25 SEPTEMBER 2024 - 03 OCTOBER 2024
+TOTAL: 626
+DETAIL:
+- Faris: 236
+- Rudi: 313
+- Yanto: 77
 
 ---------------------------------------------------------------
 NAMA: SECURITY
-TOTAL: 4439
+TOTAL: 3801
 DETAIL:
 
 - NAMA: Agung ( - )
-- TOTAL: 44
-- PERIODE: 10 AGUSTUS 2024 - 26 AGUSTUS 2024
-- TOTAL: 44
+- TOTAL: 0
+- PERIODE: 17 September - 17 September 2024
+- TOTAL: 0
 ----------------------------------------
 - NAMA: ALVIAN (SECURITY - JTI)
 - PERIODE: 26 JULI 2024 - 26 JULI 2024 
-- TOTAL: 825
-- - Kurang Periode (25 APR 2024 - 27 JUNI 2024): 825
+- TOTAL: 0
 ----------------------------------------
 - NAMA: ANNAS (SECURITY - APG)
-- TOTAL: 0
-- PERIODE: 20 AGUSTUS 2024 - 26 AGUSTUS 2024
-- TOTAL: 0
+- TOTAL: 65
+
+- PERIODE: 20 AGUSTUS 2024 - 24 September 2024
+- TOTAL: 22 (Kurang Bayar)
+
+- PERIODE: 25 September 2024 - 03 October 2024
+- TOTAL: 43
 ----------------------------------------
 - NAMA: BABEH (K3 - APG)
-- TOTAL: 270
-- PERIODE: 24 JULI 2024 - 12 AGUSTUS 2024
-- TOTAL: 16
-- - Kurang Bayar: 16
+- TOTAL: 766
 
-- PERIODE: 13 AGUSTUS 2024 - 26 AGUSTUS 2024
-- TOTAL: 254
+- PERIODE: 13 AGUSTUS 2024 - 10 September 2024
+- TOTAL: 17 (Kurang Bayar)
+
+- PERIODE: 11 September 2024 - 03 October 2024
+- TOTAL: 749
 ----------------------------------------
 - NAMA: BAMBANG (SECURITY - APG)
-- TOTAL: 501 
-- PERIODE: 24 JULI 2024 - 26 AGUSTUS 2024
-- TOTAL: 501
+- TOTAL: 23 
+- PERIODE: 25 September 2024 - 03 October 2024
+- TOTAL: 23
 ----------------------------------------
 - NAMA: HARIANTO ( - )
-- TOTAL: 279 
-- PERIODE: 10 AGUSTUS 2024 - 26 AGUSTUS 2024
-- TOTAL: 279
+- TOTAL: 427
+
+- PERIODE: 24 AGUSTUS 2024 - 24 September 2024
+- TOTAL: 387 (Kurang Bayar)
+
+- PERIODE: 25 September 2024 - 03 October 2024
+- TOTAL: 40
 ----------------------------------------
 - NAMA: RESNU (SECURITY - APG)
 - PERIODE: 28 JUNI 2024 - 25 JULI 2024
@@ -495,34 +572,9 @@ DETAIL:
 
 ---------------------------------------------------------------
 NAMA: SUBADI (BESI - APG)
-TOTAL: 6627
+TOTAL: 627
 
-PERIODE: 02 DES 2023 - 16 MEI 2024
-TOTAL: 5241
-DETAIL:
-- Kurang Periode Sekarang: 5241
-
-PERIODE: 31 MEI 2024 - 24 JUN 2024
-TOTAL: 959
-DETAIL:
-- Kurang Periode Sekarang: 959
-
-PERIODE: 25 JUNI 2024 - 12 JULI 2024
-TOTAL: 427
-- Anggi: 0
-- Apay: 31
-- Bogor: 58
-- Dadan: 0
-- Galuh: 0
-- Herman: 49
-- Juber: 12
-- Latip: 68
-- Martin: 37
-- Nanang: 38
-- Rus: 93
-- Sofyan: 41
-
--- TOTAL (02 DES 2023 - 12 JUL 2024): 6627
+-- TOTAL (02 DES 2023 - 12 JUL 2024): 627
 
 ---------------------------------------------------------------
 NAMA: SUGENG (COR - APG)
