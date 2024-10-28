@@ -12,6 +12,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -132,7 +134,29 @@ public class TempoHelper {
                 writer.write(dataTempo.getWaktuTempo().toString() + "," + dataTempo.getTotalTempo().toString());
                 writer.newLine();
             }
-            System.out.println("Data has been written to the file successfully.");
+            
+            Map<String, Integer> tempoMap = mandor.getListTempo().stream().collect(
+                Collectors.groupingBy(
+                 t -> {
+                    LocalDate localDate = t.getWaktuTempo().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+                    return localDate.getMonthValue() + "-" + localDate.getYear(); // Grouping by "month-year"
+                },
+                Collectors.summingInt(Tempo::getTotalTempo)
+            ));
+
+            tempoMap
+                    .forEach((key, value) -> 
+                    {
+                        try {
+                        writer.write("Month-Year: " + key + ", Total Amount: " + value);
+                        writer.newLine();
+                        } catch (Exception e){
+                            
+                        }
+                    }
+                    
+            );
+
         } catch (IOException e) {
             e.printStackTrace();
         }

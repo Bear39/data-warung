@@ -5,7 +5,7 @@ public class TempoChecker {
 
     public static void main(String[] args) throws Exception {
         TempoHelper.clearRevisiDir(Access.BIASA);
-        TempoHelper.checkTempo(Access.BIASA, false, false);
+        TempoHelper.checkTempo(Access.BIASA, false, true);
     }
 
 }
