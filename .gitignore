@@ -36,3 +36,5 @@ replay_pid*
 
 # Built Visual Studio Code Extensions
 *.vsix
+.aider*
+.env
