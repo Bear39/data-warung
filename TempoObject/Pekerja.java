@@ -10,6 +10,36 @@ public class Pekerja {
     private Boolean hasError = false;
     private String errorMessage = "";
 
+    // New methods to support detailed transaction tracking
+    public Integer getTotalRokokHutang() {
+        return listTransaksi.stream()
+            .filter(t -> t.getJenis() == JenisTransaksi.ROKOK)
+            .mapToInt(Transaksi::getHutang)
+            .sum();
+    }
+
+    public Integer getTotalWalletHutang() {
+        return listTransaksi.stream()
+            .filter(t -> t.getJenis() == JenisTransaksi.WALLET)
+            .mapToInt(Transaksi::getHutang)
+            .sum();
+    }
+
+    public Integer getTotalMakanHutang() {
+        return listTransaksi.stream()
+            .filter(t -> t.getJenis() == JenisTransaksi.MAKAN)
+            .mapToInt(Transaksi::getHutang)
+            .sum();
+    }
+
+    // Validation method
+    public boolean validateTotalHutang() {
+        int calculatedTotal = listTransaksi.stream()
+            .mapToInt(Transaksi::getHutang)
+            .sum();
+        return calculatedTotal == totalUtang;
+    }
+
     public String getNama() {
         return nama;
     }

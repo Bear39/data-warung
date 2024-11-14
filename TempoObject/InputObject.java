@@ -18,7 +18,7 @@ public class InputObject {
         return inputName;
     }
 
-    public void setLinstInputDates(List<InputDate> input) {
+    public void setInputDates(List<InputDate> input) {
         inputDateList = input;
     }
 
@@ -28,6 +28,17 @@ public class InputObject {
 
     public void addInputDate(InputDate input) {
         inputDateList.add(input);
+    }
+
+    // New method to validate input dates
+    public boolean validateInputDates() {
+        return inputDateList.stream()
+            .allMatch(date -> 
+                date.getStartDate() != null && 
+                date.getEndDate() != null && 
+                !date.getStartDate().isEmpty() && 
+                !date.getEndDate().isEmpty()
+            );
     }
 
 }

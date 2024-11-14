@@ -71,15 +71,6 @@ public class TempoHelper {
             e.printStackTrace();
         }
 
-        // Output to check if the values are set correctly
-        // for (InputObject obj : inputObjects) {
-        // System.out.println("Input Name: " + obj.getInputName());
-        // for (InputDate date : obj.getInputDates()) {
-        // System.out.println(" Start Date: " + date.getStartDate());
-        // System.out.println(" End Date: " + date.getEndDate());
-        // }
-        // }
-
         return inputObjects;
     }
 
@@ -129,33 +120,57 @@ public class TempoHelper {
         String writtenFilePathString = root.toString() + File.separator + "csv" + File.separator
                 + "SUMMARY_" + path.getFileName();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(writtenFilePathString))) {
-            // Iterate through the List and write each element to the file with a new line
+            // Detailed summary with transaction type breakdown
             for (Tempo dataTempo : mandor.getListTempo()) {
-                writer.write(dataTempo.getWaktuTempo().toString() + "," + dataTempo.getTotalTempo().toString());
+                writer.write("Date: " + dataTempo.getWaktuTempo().toString());
+                writer.newLine();
+                writer.write("Total Tempo: " + dataTempo.getTotalTempo().toString());
+                writer.newLine();
+            
+                // Transaction type summary
+                writer.write("Total Makan: " + dataTempo.getTotalHutangByType(JenisTransaksi.MAKAN));
+                writer.newLine();
+                writer.write("Total Rokok: " + dataTempo.getTotalHutangByType(JenisTransaksi.ROKOK));
+                writer.newLine();
+                writer.write("Total Wallet: " + dataTempo.getTotalHutangByType(JenisTransaksi.WALLET));
+                writer.newLine();
                 writer.newLine();
             }
-            
-            Map<String, Integer> tempoMap = mandor.getListTempo().stream().collect(
-                Collectors.groupingBy(
-                 t -> {
-                    LocalDate localDate = t.getWaktuTempo().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-                    return localDate.getMonthValue() + "-" + localDate.getYear(); // Grouping by "month-year"
-                },
-                Collectors.summingInt(Tempo::getTotalTempo)
-            ));
+        
+            // Monthly aggregation with transaction type breakdown
+            Map<String, Map<JenisTransaksi, Integer>> monthlyDetailedMap = mandor.getListTempo().stream()
+                .collect(
+                    Collectors.groupingBy(
+                        t -> {
+                            LocalDate localDate = t.getWaktuTempo().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+                            return localDate.getMonthValue() + "-" + localDate.getYear();
+                        },
+                        Collectors.groupingBy(
+                            t -> JenisTransaksi.MAKAN,
+                            Collectors.summingInt(t -> t.getTotalHutangByType(JenisTransaksi.MAKAN))
+                        )
+                    )
+                );
 
-            tempoMap
-                    .forEach((key, value) -> 
-                    {
+            writer.write("Monthly Detailed Summary:");
+            writer.newLine();
+            monthlyDetailedMap.forEach((monthYear, typeMap) -> {
+                try {
+                    writer.write("Month-Year: " + monthYear);
+                    writer.newLine();
+                    typeMap.forEach((type, amount) -> {
                         try {
-                        writer.write("Month-Year: " + key + ", Total Amount: " + value);
-                        writer.newLine();
-                        } catch (Exception e){
-                            
+                            writer.write(type + ": " + amount);
+                            writer.newLine();
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
-                    }
-                    
-            );
+                    });
+                    writer.newLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -165,30 +180,40 @@ public class TempoHelper {
     private static void writeValidatedCSV(Mandor mandor, String filePath) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))) {
             for (Tempo tempo : mandor.getListTempo()) {
+                // Comprehensive validation for each tempo
+                boolean tempoValid = tempo.validateTotalTempo();
+                
                 bufferedWriter.write(tempo.getNamaTempo() + "," + tempo.getTotalTempo().toString());
-                if (tempo.getHasError()) {
-                    bufferedWriter.write("," + tempo.getErrorMessage());
+                if (!tempoValid || tempo.getHasError()) {
+                    bufferedWriter.write(",VALIDATION_ERROR");
+                    bufferedWriter.write("," + (tempo.getErrorMessage() != null ? tempo.getErrorMessage() : "Total Tempo Mismatch"));
                 }
                 bufferedWriter.newLine();
+                
                 for (Pekerja pekerja : tempo.getSetPekerja()) {
+                    // Detailed worker validation
+                    boolean pekerjaValid = pekerja.validateTotalHutang();
+                    
                     bufferedWriter.write(pekerja.getNama() + ",");
-                    for (Transaksi transaksi : pekerja.getListTransaksi()) {
-                        if (transaksi.getJenis() == JenisTransaksi.MAKAN) {
-                            bufferedWriter.write(transaksi.getHutang().toString() + ",");
-                        } else {
-                            bufferedWriter.write(transaksi.getHutang().toString() + "R,");
-                        }
-                    }
-                    bufferedWriter.write(pekerja.getTotalUtang().toString());
-                    if (pekerja.getHasError()) {
-                        bufferedWriter.write("," + pekerja.getErrorMessage());
+                    
+                    // Detailed transaction breakdown
+                    bufferedWriter.write("Makan: " + pekerja.getTotalMakanHutang() + ",");
+                    bufferedWriter.write("Rokok: " + pekerja.getTotalRokokHutang() + ",");
+                    bufferedWriter.write("Wallet: " + pekerja.getTotalWalletHutang() + ",");
+                    
+                    bufferedWriter.write("Total: " + pekerja.getTotalUtang());
+                    
+                    if (!pekerjaValid || pekerja.getHasError()) {
+                        bufferedWriter.write(",VALIDATION_ERROR");
+                        bufferedWriter.write("," + (pekerja.getErrorMessage() != null ? pekerja.getErrorMessage() : "Total Hutang Mismatch"));
                     }
                     bufferedWriter.newLine();
                 }
+                bufferedWriter.newLine(); // Separate each tempo
             }
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("error pada pembacaan file");
+            System.out.println("Error processing validated CSV");
         }
     }
 
@@ -270,20 +295,129 @@ public class TempoHelper {
         }
     }
 
-    private static void writeError(List<String> errorList, String filePath) {
-        Path path = Paths.get(filePath);
-        Path root = path.getParent().getParent();
+    // New method for generating transaction type summary
+    private static void generateTransactionTypeSummary(List<Mandor> mandors, 
+                                                       JenisTransaksi transactionType) {
+        Path summaryPath = Paths.get(getAccessPath(Access.BIASA) + File.separator + "summary");
+        
+        Date startDate;
+        Date endDate;
 
-        String writtenFilePathString = root.toString() + File.separator + "revisi" + File.separator + "List Revisi "
-                + path.getFileName();
+        try {
+            startDate = new SimpleDateFormat("dd MMM yyyy").parse("01 OCT 2023");
+            endDate = new SimpleDateFormat("dd MMM yyyy").parse("01 JAN 2025");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(writtenFilePathString))) {
-            // Iterate through the List and write each element to the file with a new line
-            for (String data : errorList) {
-                writer.write(data);
-                writer.newLine(); // Add a new line after each element
-            }
-            System.out.println("Data has been written to the file successfully.");
+        // Ensure summary directory exists
+        try {
+            Files.createDirectories(summaryPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        SimpleDateFormat monthYearFormat = new SimpleDateFormat("MMM yyyy");
+        String summaryFileName = String.format("SUMMARY_%s - %s.csv", 
+                                               transactionType.name(), 
+                                               monthYearFormat.format(startDate));
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(summaryPath.resolve(summaryFileName).toFile()))) {
+            // CSV Header
+            writer.write("Date,Total Amount");
+            writer.newLine();
+
+            // Filter and aggregate transactions by type and date range
+            mandors.stream()
+                .flatMap(mandor -> mandor.getListTempo().stream())
+                .filter(tempo -> isWithinRange(tempo.getWaktuTempo(), startDate, endDate))
+                .collect(Collectors.groupingBy(
+                    Tempo::getWaktuTempo,
+                    Collectors.summingInt(tempo -> 
+                        tempo.getSetPekerja().stream()
+                            .flatMap(pekerja -> pekerja.getListTransaksi().stream())
+                            .filter(transaksi -> transaksi.getJenis() == transactionType)
+                            .mapToInt(Transaksi::getHutang)
+                            .sum()
+                    )
+                ))
+                .forEach((date, totalAmount) -> {
+                    try {
+                        writer.write(String.format("%s,%d", new SimpleDateFormat("dd MMM yyyy").format(date), totalAmount));
+                        writer.newLine();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // New method for generating daily mandor total summary
+    private static void generateMandorDailySummary(List<Mandor> mandors) {
+        Path summaryPath = Paths.get(getAccessPath(Access.BIASA) + File.separator + "summary");
+        
+        Date startDate;
+        Date endDate;
+
+        try {
+            startDate = new SimpleDateFormat("dd MMM yyyy").parse("01 OCT 2023");
+            endDate = new SimpleDateFormat("dd MMM yyyy").parse("01 JAN 2025");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+            
+        try {
+            Files.createDirectories(summaryPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        SimpleDateFormat monthYearFormat = new SimpleDateFormat("MMM yyyy");
+        String summaryFileName = String.format("SUMMARY - %s.csv", monthYearFormat.format(startDate));
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(summaryPath.resolve(summaryFileName).toFile()))) {
+            // CSV Header
+            writer.write("Date,Total Kasbon,");
+            mandors.forEach(mandor -> {
+                try {
+                    writer.write(mandor.getNama() + " Total,");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            writer.newLine();
+
+            // Group and aggregate daily totals
+            mandors.stream()
+                .flatMap(mandor -> mandor.getListTempo().stream())
+                .filter(tempo -> isWithinRange(tempo.getWaktuTempo(), startDate, endDate))
+                .collect(Collectors.groupingBy(
+                    Tempo::getWaktuTempo,
+                    Collectors.toList()
+                ))
+                .forEach((date, tempos) -> {
+                    try {
+                        int totalKasbon = tempos.stream().mapToInt(Tempo::getTotalTempo).sum();
+                        writer.write(new SimpleDateFormat("dd MMM yyyy").format(date) + "," + totalKasbon + ",");
+                        
+                        for (Mandor mandor : mandors) {
+                            int mandorTotal = tempos.stream()
+                                .filter(tempo -> tempo.getNamaTempo().startsWith(mandor.getNama()))
+                                .mapToInt(Tempo::getTotalTempo)
+                                .sum();
+                            writer.write(mandorTotal + ",");
+                        }
+                        writer.newLine();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -342,367 +476,111 @@ public class TempoHelper {
         deleteContents(revisiDir);
     }
 
+    private static void writeError(List<String> errorList, String filePath) {
+        Path path = Paths.get(filePath);
+        Path root = path.getParent().getParent();
+
+        String writtenFilePathString = root.toString() + File.separator + "revisi" + File.separator
+                + "Comprehensive_Error_Report_"
+                + path.getFileName();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(writtenFilePathString))) {
+            writer.write("COMPREHENSIVE ERROR REPORT");
+            writer.newLine();
+            writer.write("Generated: " + new Date());
+            writer.newLine();
+            writer.write("Source File: " + filePath);
+            writer.newLine();
+            writer.write("Total Errors: " + errorList.size());
+            writer.newLine();
+            writer.write("-------------------------------------------");
+            writer.newLine();
+
+            // Categorize and write errors
+            Map<String, List<String>> categorizedErrors = errorList.stream()
+                    .collect(Collectors.groupingBy(
+                            error -> error.contains("tempo") ? "Tempo Errors"
+                                    : error.contains("pekerja") ? "Worker Errors"
+                                            : error.contains("hutang") ? "Transaction Errors"
+                                                    : "Miscellaneous Errors"));
+
+            for (Map.Entry<String, List<String>> category : categorizedErrors.entrySet()) {
+                writer.newLine();
+                writer.write(category.getKey() + ":");
+                writer.newLine();
+                for (String error : category.getValue()) {
+                    writer.write("- " + error);
+                    writer.newLine();
+                }
+            }
+
+            System.out.println("Comprehensive error report generated successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void checkTempo(Access akses, Boolean csvFlag, Boolean summaryFlag) {
-
         String dirPath = getAccessPath(akses);
-
         List<InputObject> inputObjects = getInput(akses);
-
         String fileOutput = dirPath + File.separator + "OUTPUT";
 
+        // Dependency Injection
+        ErrorReporter errorReporter = new DefaultErrorReporter();
+        FileProcessor fileProcessor = new DefaultFileProcessor(errorReporter);
+        OutputWriter outputWriter = new DefaultOutputWriter();
+        DateRangeProcessor dateRangeProcessor = new DateRangeProcessor();
+
         try (BufferedWriter fWriter = new BufferedWriter(new FileWriter(fileOutput))) {
-
-            for (int x = 0; x < inputObjects.size(); x++) {
-
-                InputObject inputObj = inputObjects.get(x);
-
-                for (int w = 0; w < inputObj.getInputDates().size(); w++) {
-
-                    InputDate inputDate = inputObj.getInputDates().get(w);
-
+            for (InputObject inputObj : inputObjects) {
+                for (InputDate inputDate : inputObj.getInputDates()) {
                     String namaMandor = inputObj.getInputName();
                     String tanggalMulai = inputDate.getStartDate();
                     String tanggalAkhir = inputDate.getEndDate();
 
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy");
-                    List<String> rekapFilenames = new ArrayList<>();
                     Path rekapPath = Paths.get(dirPath + File.separator + "rekap");
+                    List<String> rekapFilenames = fileProcessor.readFiles(rekapPath.toString());
 
-                    if (Files.exists(rekapPath)) {
-                        if (Files.isDirectory(rekapPath)) {
-                            rekapFilenames = readFiles(rekapPath.toString());
-                        } else if (Files.isRegularFile(rekapPath)) {
-                            rekapFilenames.add(rekapPath.getFileName().toString());
-                        } else {
-                            System.out.println("NOT FOUND");
-                        }
-                    }
-
-                    Map<String, Mandor> mapMandor = new HashMap<>();
-
-                    for (String fileName : rekapFilenames) {
-                        List<String> errorMandor = new ArrayList<>();
-                        List<String> errorPekerja = new ArrayList<>();
-                        String mandorName = fileName.split(" - ")[0];
-                        Mandor mandor = null;
-                        if (mapMandor.get(mandorName) != null) {
-                            mandor = mapMandor.get(mandorName);
-                        } else {
-                            mandor = new Mandor();
-                            mandor.setNama(mandorName);
-                        }
-                        String filePath = rekapPath.toString() + File.separator + fileName;
-                        try (
-                                BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
-                            String line;
-                            int lineNumber = 0;
-                            int lastTempoLine = 0;
-                            while ((line = bufferedReader.readLine()) != null) {
-                                lineNumber++;
-                                if (line.matches("\\d{1,2} \\w{3}.*")) {
-                                    if (!mandor.getListTempo().isEmpty()) {
-                                        Tempo lastTempo = mandor.getListTempo().get(mandor.getListTempo().size() - 1);
-                                        if (lastTempo.hasTotalTempo()) {
-                                            int realTotalTempo = lastTempo.getSetPekerja().stream()
-                                                    .mapToInt(Pekerja::getTotalUtang).sum();
-                                            if (realTotalTempo != lastTempo.getTotalTempo()) {
-                                                String errorMessage = "Error penjumlahan total tempo, total jumlah "
-                                                        + realTotalTempo + " tercatat " + lastTempo.getTotalTempo();
-                                                lastTempo.setHasError(true);
-                                                lastTempo.setErrorMessage(errorMessage);
-                                                errorMandor.add(errorMessage + " pada \""
-                                                        + lastTempo.getNamaTempo() + "\" line "
-                                                        + lastTempoLine);
-                                            }
-                                        } else {
-                                            int realTotalTempo = lastTempo.getSetPekerja().stream()
-                                                    .mapToInt(Pekerja::getTotalUtang).sum();
-                                            lastTempo.setTotalTempo(realTotalTempo);
-                                        }
-                                    }
-                                    String[] dataTempo = line.split(",");
-                                    Tempo tempo = new Tempo();
-                                    if (dataTempo.length == 2) {
-                                        if (dataTempo[0].split(" ")[0].length() == 1) {
-                                            dataTempo[0] = "0" + dataTempo[0];
-                                        }
-                                        tempo.setNamaTempo(dataTempo[0]);
-                                        try {
-                                            tempo.setWaktuTempo(dateFormat.parse(dataTempo[0]));
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                            String errorMessage = "Error input waktu tempo";
-                                            tempo.setHasError(true);
-                                            tempo.setErrorMessage(errorMessage);
-                                            errorMandor.add(errorMessage + " pada " + tempo.getNamaTempo()
-                                                    + "\" line " + lineNumber);
-                                        }
-                                        tempo.setTotalTempoExistence(true);
-                                        try {
-                                            tempo.setTotalTempo(Integer.parseInt(dataTempo[1]));
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                            String errorMessage = "Error total tempo bukan berupa angka";
-                                            tempo.setHasError(true);
-                                            tempo.setErrorMessage(errorMessage);
-                                            errorMandor.add(errorMessage + " pada " + tempo.getNamaTempo()
-                                                    + "\" line " + lineNumber);
-                                        }
-                                    } else if (dataTempo.length == 1) {
-                                        if (dataTempo[0].split(" ")[0].length() == 1) {
-                                            dataTempo[0] = "0" + dataTempo[0];
-                                        }
-                                        tempo.setNamaTempo(dataTempo[0]);
-                                        try {
-                                            tempo.setWaktuTempo(dateFormat.parse(dataTempo[0]));
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                            String errorMessage = "Error input waktu tempo";
-                                            tempo.setHasError(true);
-                                            tempo.setErrorMessage(errorMessage);
-                                            errorMandor.add(errorMessage + " pada " + tempo.getNamaTempo()
-                                                    + "\" line " + lineNumber);
-                                        }
-                                        tempo.setTotalTempoExistence(false);
-                                    } else {
-                                        String errorMessage = "Error input data tempo";
-                                        tempo.setHasError(true);
-                                        tempo.setErrorMessage(errorMessage);
-                                        errorMandor.add(errorMessage + " pada "
-                                                + tempo.getNamaTempo() + " line " + lineNumber);
-                                    }
-                                    mandor.addTempo(tempo);
-                                    lastTempoLine = lineNumber;
-                                } else {
-                                    Tempo tempo = null;
-                                    try {
-                                        tempo = mandor.getListTempo().get(mandor.getListTempo().size() - 1);
-                                    } catch (Exception e) {
-                                        System.out.println("ERROR!" + line);
-                                    }
-                                    String dataPekerja[] = line.split(",");
-                                    if (dataPekerja.length >= 3) {
-                                        Pekerja pekerja = new Pekerja();
-                                        if (containsNonAlphabetic(dataPekerja[0])) {
-                                            String errorMessage = "Error input nama pekerja";
-                                            pekerja.setHasError(true);
-                                            pekerja.setErrorMessage(errorMessage);
-                                            errorPekerja.add(errorMessage + " pada "
-                                                    + tempo.getNamaTempo() + " line " + lineNumber);
-                                        } else {
-                                            pekerja.setNama(dataPekerja[0]);
-                                        }
-                                        int totalDataPekerja = dataPekerja.length;
-                                        int totalUtangPekerja = 0;
-                                        try {
-                                            totalUtangPekerja = Integer.parseInt(dataPekerja[totalDataPekerja - 1]);
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                            String errorMessage = "Error dalam input total hutang";
-                                            pekerja.setHasError(true);
-                                            pekerja.setErrorMessage(errorMessage);
-                                            errorPekerja
-                                                    .add("Error dalam input total hutang " + pekerja.getNama()
-                                                            + " pada \""
-                                                            + tempo.getNamaTempo() + "\" line "
-                                                            + lineNumber);
-                                        }
-                                        pekerja.setTotalUtang(totalUtangPekerja);
-                                        for (int i = 1; i < totalDataPekerja - 1; i++) {
-                                            Transaksi transaksi = new Transaksi();
-                                            if (dataPekerja[i].contains("R")) {
-                                                transaksi.setJenis(JenisTransaksi.ROKOK);
-                                                try {
-                                                    transaksi.setHutang(
-                                                            Integer.parseInt(
-                                                                    dataPekerja[i].substring(0,
-                                                                            dataPekerja[i].length() - 1)));
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    String errorMessage = "Error dalam input hutang";
-                                                    pekerja.setHasError(true);
-                                                    pekerja.setErrorMessage(errorMessage);
-                                                    errorPekerja
-                                                            .add("Error dalam input hutang " + pekerja.getNama()
-                                                                    + " pada \""
-                                                                    + tempo.getNamaTempo() + "\" line "
-                                                                    + lineNumber);
-                                                }
-                                            } else if (dataPekerja[i].contains("W")) {
-                                                transaksi.setJenis(JenisTransaksi.WALLET);
-                                                try {
-                                                    transaksi.setHutang(
-                                                            Integer.parseInt(
-                                                                    dataPekerja[i].substring(0,
-                                                                            dataPekerja[i].length() - 1)));
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    String errorMessage = "Error dalam input hutang";
-                                                    pekerja.setHasError(true);
-                                                    pekerja.setErrorMessage(errorMessage);
-                                                    errorPekerja
-                                                            .add("Error dalam input hutang " + pekerja.getNama()
-                                                                    + " pada \""
-                                                                    + tempo.getNamaTempo() + "\" line "
-                                                                    + lineNumber);
-                                                }
-                                            } else {
-                                                try {
-                                                    transaksi.setHutang(Integer.parseInt(dataPekerja[i]));
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    String errorMessage = "Error dalam input hutang";
-                                                    pekerja.setHasError(true);
-                                                    pekerja.setErrorMessage(errorMessage);
-                                                    errorPekerja
-                                                            .add("Error dalam input hutang " + pekerja.getNama()
-                                                                    + " pada \""
-                                                                    + tempo.getNamaTempo() + "\" line "
-                                                                    + lineNumber);
-                                                }
-                                            }
-                                            pekerja.addTransaksi(transaksi);
-                                        }
-                                        int realTotalHutang = pekerja.getListTransaksi().stream()
-                                                .mapToInt(Transaksi::getHutang)
-                                                .sum();
-                                        if (realTotalHutang != pekerja.getTotalUtang()) {
-                                            String errorMessage = "Error penjumlahan total transaksi "
-                                                    + pekerja.getNama()
-                                                    + ", total jumlah "
-                                                    + realTotalHutang + " tercatat " + pekerja.getTotalUtang();
-                                            pekerja.setHasError(true);
-                                            pekerja.setErrorMessage(errorMessage);
-                                            errorPekerja
-                                                    .add("Error penjumlahan total transaksi " + pekerja.getNama()
-                                                            + ", total jumlah "
-                                                            + realTotalHutang + " tercatat " + pekerja.getTotalUtang()
-                                                            + " pada \""
-                                                            + tempo.getNamaTempo() + "\" line " + lineNumber);
-                                        }
-                                        if (!tempo.addPekerja(pekerja)) {
-                                            int counter = 2;
-                                            String newName;
-                                            do {
-                                                String errorMessage = "Error data " + pekerja.getNama();
-                                                pekerja.setHasError(true);
-                                                pekerja.setErrorMessage(errorMessage);
-                                                errorPekerja
-                                                        .add("Error data " + pekerja.getNama() + " pada \""
-                                                                + tempo.getNamaTempo()
-                                                                + "\" line " + lineNumber + " sudah ada sebelumnya.");
-                                                newName = pekerja.getNama() + " (" + counter++ + ")";
-                                                pekerja.setNama(newName);
-                                            } while (!tempo.addPekerja(pekerja));
-                                        }
-                                    } else {
-                                        Pekerja pekerja = new Pekerja();
-                                        String errorMessage = "Error data " + pekerja.getNama();
-                                        pekerja.setHasError(true);
-                                        pekerja.setErrorMessage(errorMessage);
-                                        try {
-                                            errorPekerja
-                                                    .add("Error data pekerja tidak lengkap pada \""
-                                                            + tempo.getNamaTempo()
-                                                            + "\" line "
-                                                            + lineNumber);
-                                        } catch (Exception e) {
-                                            System.out.println(line);
-                                        }
-                                    }
-                                }
-                            }
-                            Tempo lastTempo = mandor.getListTempo().get(mandor.getListTempo().size() - 1);
-                            if (lastTempo.hasTotalTempo()) {
-                                int realTotalTempo = lastTempo.getSetPekerja().stream()
-                                        .mapToInt(Pekerja::getTotalUtang).sum();
-                                if (realTotalTempo != lastTempo.getTotalTempo()) {
-                                    String errorMessage = "Error penjumlahan total tempo, total jumlah "
-                                            + realTotalTempo + " tercatat " + lastTempo.getTotalTempo();
-                                    lastTempo.setHasError(true);
-                                    lastTempo.setErrorMessage(errorMessage);
-                                    errorMandor.add(errorMessage + " pada \""
-                                            + lastTempo.getNamaTempo() + "\" line "
-                                            + lastTempoLine);
-                                }
-                            } else {
-                                int realTotalTempo = lastTempo.getSetPekerja().stream()
-                                        .mapToInt(Pekerja::getTotalUtang).sum();
-                                lastTempo.setTotalTempo(realTotalTempo);
-                            }
-
-                            Set<Tempo> uniqueTempoSet = new TreeSet<>(new TempoComparator());
-                            for (Tempo addedTempo : mandor.getListTempo()) {
-                                if (!uniqueTempoSet.add(addedTempo)) {
-                                    int counter = 2;
-                                    String newName;
-                                    do {
-                                        errorPekerja
-                                                .add("Error data \"" + addedTempo.getNamaTempo()
-                                                        + "\" sudah ada sebelumnya");
-                                        newName = addedTempo.getNamaTempo() + " (" + counter++ + ")";
-                                        addedTempo.setNamaTempo(newName);
-                                    } while (!uniqueTempoSet.add(addedTempo));
-                                }
-                            }
-                            mandor.setListTempo(new ArrayList<>(uniqueTempoSet));
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            System.out.println("error pada pembacaan file " + fileName);
-                        }
-
-                        mapMandor.put(mandorName, mandor);
-
-                        if (!errorPekerja.isEmpty()) {
-                            writeError(errorPekerja, filePath);
-                        } else if (!errorMandor.isEmpty()) {
-                            writeError(errorMandor, filePath);
-                        }
-
-                        if (csvFlag)
-                            writeCsv(mandor, filePath);
-
-                        if (summaryFlag)
-                            writeSummary(mandor, filePath);
-                    }
+                    Map<String, Mandor> mapMandor = fileProcessor.processFiles(rekapFilenames, rekapPath.toString());
 
                     Mandor curMandor = mapMandor.get(namaMandor);
-                    Date startDate = null;
-                    Date endDate = null;
-                    try {
-                        startDate = dateFormat.parse(tanggalMulai);
-                        endDate = dateFormat.parse(tanggalAkhir);
-                    } catch (Exception e) {
-                        System.out.println("ERROR!!");
+
+                    DateRangeProcessor.DateRange dateRange = dateRangeProcessor.parseDateRange(tanggalMulai,
+                            tanggalAkhir);
+
+                    int totalPayment = calculateTotalPayment(
+                            curMandor,
+                            dateRange.getStartDate(),
+                            dateRange.getEndDate());
+
+                    TreeMap<String, Integer> totalHutangTiapPekerja = calculateEachWorker(
+                            curMandor,
+                            dateRange.getStartDate(),
+                            dateRange.getEndDate());
+
+                    // Optional processing flags
+                    if (csvFlag) {
+                        for (String fileName : rekapFilenames) {
+                            String filePath = rekapPath.toString() + File.separator + fileName;
+                            writeCsv(mapMandor.get(fileName.split(" - ")[0]), filePath);
+                        }
                     }
 
-                    int totalPayment = calculateTotalPayment(curMandor, startDate, endDate);
-
-                    TreeMap<String, Integer> totalHutangTiapPekerja = TempoHelper
-                            .calculateEachWorker(curMandor, startDate, endDate);
-
-                    // System.out.println("NAMA: " + curMandor.getNama().toUpperCase());
-                    // System.out.println("PERIODE: " + tanggalMulai.toUpperCase() + " - " +
-                    // tanggalAkhir.toUpperCase());
-                    // System.out.println("TOTAL: " + totalPayment);
-                    // for (Map.Entry<String, Integer> entry : totalHutangTiapPekerja.entrySet()) {
-                    // System.out.println("- " + entry.getKey() + ": " + entry.getValue());
-                    // }
-
-                    fWriter.write("NAMA: " + curMandor.getNama().toUpperCase());
-                    fWriter.newLine();
-                    fWriter.write("PERIODE: " + tanggalMulai.toUpperCase() + " - " + tanggalAkhir.toUpperCase());
-                    fWriter.newLine();
-                    fWriter.write("TOTAL: " + totalPayment);
-                    fWriter.newLine();
-                    fWriter.write("DETAIL:");
-                    fWriter.newLine();
-                    for (Map.Entry<String, Integer> entry : totalHutangTiapPekerja.entrySet()) {
-                        fWriter.write("- " + entry.getKey() + ": " + entry.getValue());
-                        fWriter.newLine();
+                    if (summaryFlag) {
+                        for (String fileName : rekapFilenames) {
+                            String filePath = rekapPath.toString() + File.separator + fileName;
+                            writeSummary(mapMandor.get(fileName.split(" - ")[0]), filePath);
+                        }
                     }
-                    fWriter.newLine();
 
+                    // Write output using the new OutputWriter
+                    outputWriter.writeOutput(
+                            fWriter,
+                            curMandor,
+                            tanggalMulai,
+                            tanggalAkhir,
+                            totalPayment,
+                            totalHutangTiapPekerja);
                 }
             }
         } catch (IOException e) {

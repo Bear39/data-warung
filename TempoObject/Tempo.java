@@ -13,6 +13,35 @@ public class Tempo {
     private Boolean hasError = false;
     private String errorMessage = "";
 
+    // New method to validate total tempo against worker totals
+    public boolean validateTotalTempo() {
+        int calculatedTotal = setPekerja.stream()
+            .mapToInt(Pekerja::getTotalUtang)
+            .sum();
+        
+        // If total tempo was not originally specified, set it to calculated total
+        if (!totalTempoExist) {
+            totalTempo = calculatedTotal;
+            totalTempoExist = true;
+            return true;
+        }
+        
+        // Check if calculated total matches specified total
+        return calculatedTotal == totalTempo;
+    }
+
+    // Method to get total hutang for a specific transaction type
+    public Integer getTotalHutangByType(JenisTransaksi jenis) {
+        return setPekerja.stream()
+            .mapToInt(pekerja -> 
+                pekerja.getListTransaksi().stream()
+                    .filter(t -> t.getJenis() == jenis)
+                    .mapToInt(Transaksi::getHutang)
+                    .sum()
+            )
+            .sum();
+    }
+
     public String getNamaTempo() {
         return namaTempo;
     }
