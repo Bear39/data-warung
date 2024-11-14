@@ -1,15 +1,17 @@
 package TempoObject;
 
+import TempoObject.model.TransactionType;
+
 public class Transaksi {
-    private JenisTransaksi jenis = JenisTransaksi.MAKAN;
+    private TransactionType type = TransactionType.NORMAL;
     private Integer hutang = 0;
 
-    public JenisTransaksi getJenis() {
-        return jenis;
+    public TransactionType getType() {
+        return type;
     }
 
-    public void setJenis(JenisTransaksi jenis) {
-        this.jenis = jenis;
+    public void setType(TransactionType type) {
+        this.type = type;
     }
 
     public Integer getHutang() {
@@ -20,8 +22,12 @@ public class Transaksi {
         this.hutang = hutang;
     }
 
+    public String getFormattedHutang() {
+        return hutang + type.getSuffix();
+    }
+
     @Override
     public String toString() {
-        return "Transaksi [jenis=" + jenis + ", hutang=" + hutang + "]";
+        return "Transaksi [type=" + type + ", hutang=" + hutang + "]";
     }
 }
